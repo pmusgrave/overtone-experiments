@@ -1,0 +1,1512 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f6410e140dc, pid=16301, tid=0x00007f6376df4700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_121-b13) (build 1.8.0_121-8u121-b13-0ubuntu1.16.04.2-b13)
+# Java VM: OpenJDK 64-Bit Server VM (25.121-b13 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libscsynth.so+0x220dc]  SC_UdpInPort::SC_UdpInPort(World*, int)+0x9c
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f63cc994800):  JavaThread "Thread-8" daemon [_thread_in_native, id=16399, stack(0x00007f6376cf4000,0x00007f6376df5000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000160
+
+Registers:
+RAX=0x0000000000000001, RBX=0x00007f636c0e1aa0, RCX=0xffffffffffffff98, RDX=0x0000000000000001
+RSP=0x00007f6376df2e40, RBP=0x0000000000000000, RSI=0x0000000000000001, RDI=0x0000000000004017
+R8 =0x00007f635efd9700, R9 =0x00007f6376df2e00, R10=0x00007f635efd99d0, R11=0x0000000000000246
+R12=0x0000000000000000, R13=0x00007f6376df3640, R14=0x00007f6376df3550, R15=0xfffffffffffffffc
+RIP=0x00007f6410e140dc, EFLAGS=0x0000000000010202, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f6376df2e40)
+0x00007f6376df2e40:   000000000000e16f 0000000000000000
+0x00007f6376df2e50:   00007f636c0e1aa0 00007f636c000000
+0x00007f6376df2e60:   00000000000ed000 0000000000010000
+0x00007f6376df2e70:   00007f636c0e1aa0 00007f636c0e1aa0
+0x00007f6376df2e80:   000000000000e16f 00007f6410e2a492
+0x00007f6376df2e90:   0000000000000010 00007f6376df2eb0
+0x00007f6376df2ea0:   00007f63cc3934f0 00007f641108a034
+0x00007f6376df2eb0:   000000000000000a 00007f6376df36d0
+0x00007f6376df2ec0:   00007f6376df2f90 00007f6411089a61
+0x00007f6376df2ed0:   00007f6376df2ef8 0000000000000004
+0x00007f6376df2ee0:   000000000000000e 00007f6376df2e00
+0x00007f6376df2ef0:   0000000000000000 00007f6376df3550
+0x00007f6376df2f00:   00007f63cc3934f0 00007f6410e2a460
+0x00007f6376df2f10:   00007f6376df36d0 00007f6376df2e00
+0x00007f6376df2f20:   00007f63cc393460 0000000200000000
+0x00007f6376df2f30:   0000000000000010 00007f6376df2eb0
+0x00007f6376df2f40:   00007f6300000002 00007f64534f5131
+0x00007f6376df2f50:   0000000000000001 cf271a2f3c2ba500
+0x00007f6376df2f60:   00000000ffffffff 0000000000000001
+0x00007f6376df2f70:   0000000000000002 0000000000000004
+0x00007f6376df2f80:   00007f641108bfcc 0000000000000000
+0x00007f6376df2f90:   00007f6376df3530 00007f641107f1a5
+0x00007f6376df2fa0:   00007f6376df3010 00000007c07cc0d8
+0x00007f6376df2fb0:   0000000000000000 00007f641107efec
+0x00007f6376df2fc0:   0000000000000000 0000000000000000
+0x00007f6376df2fd0:   0000000000000000 0000000000000000
+0x00007f6376df2fe0:   000000000000000e ffffffffffffffff
+0x00007f6376df2ff0:   0000000000000000 0000000000000000
+0x00007f6376df3000:   0000000000000000 00007f63e8005fd8
+0x00007f6376df3010:   00007f6376df30e0 00007f645363960b
+0x00007f6376df3020:   000000000000000e ffffffffffffffff
+0x00007f6376df3030:   00000000ffffffff 00007f6453d08e78 
+
+Instructions: (pc=0x00007f6410e140dc)
+0x00007f6410e140bc:   66 c1 c8 08 c7 43 24 00 00 00 00 66 89 43 22 e8
+0x00007f6410e140cc:   50 e2 ff ff 85 c0 78 2d 48 89 df e8 64 dd ff ff
+0x00007f6410e140dc:   80 bd 60 01 00 00 00 74 15 48 8b 15 a4 1c 24 00
+0x00007f6410e140ec:   48 8d 7b 30 48 89 d9 31 f6 e8 26 cf ff ff 48 83 
+
+Register to memory mapping:
+
+RAX=0x0000000000000001 is an unknown value
+RBX=0x00007f636c0e1aa0 is an unknown value
+RCX=0xffffffffffffff98 is an unknown value
+RDX=0x0000000000000001 is an unknown value
+RSP=0x00007f6376df2e40 is pointing into the stack for thread: 0x00007f63cc994800
+RBP=0x0000000000000000 is an unknown value
+RSI=0x0000000000000001 is an unknown value
+RDI=0x0000000000004017 is an unknown value
+R8 =0x00007f635efd9700 is an unknown value
+R9 =0x00007f6376df2e00 is pointing into the stack for thread: 0x00007f63cc994800
+R10=0x00007f635efd99d0 is an unknown value
+R11=0x0000000000000246 is an unknown value
+R12=0x0000000000000000 is an unknown value
+R13=0x00007f6376df3640 is pointing into the stack for thread: 0x00007f63cc994800
+R14=0x00007f6376df3550 is pointing into the stack for thread: 0x00007f63cc994800
+R15=0xfffffffffffffffc is an unknown value
+
+
+Stack: [0x00007f6376cf4000,0x00007f6376df5000],  sp=0x00007f6376df2e40,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libscsynth.so+0x220dc]  SC_UdpInPort::SC_UdpInPort(World*, int)+0x9c
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  overtone.sc.machinery.server.native.lib_f8cb95ce_37fd_4a48_a60e_456961805dee.World_OpenUDP(Lcom/sun/jna/Pointer;I)I+0
+j  overtone.sc.machinery.server.native$eval6335$fn__6336.invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;+15
+j  overtone.sc.machinery.server.native$scsynth_listen_udp.invokeStatic(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;+55
+j  overtone.sc.machinery.server.native$scsynth_listen_udp.invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;+6
+j  overtone.sc.machinery.server.connection$internal_booter.invokeStatic(Ljava/lang/Object;)Ljava/lang/Object;+201
+j  overtone.sc.machinery.server.connection$internal_booter.invoke(Ljava/lang/Object;)Ljava/lang/Object;+3
+j  overtone.sc.machinery.server.connection$boot_internal_server$fn__6428.invoke()Ljava/lang/Object;+13
+j  clojure.lang.AFn.run()V+1
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+=>0x00007f63cc994800 JavaThread "Thread-8" daemon [_thread_in_native, id=16399, stack(0x00007f6376cf4000,0x00007f6376df5000)]
+  0x00007f63b4001000 JavaThread "pool-3-thread-10" [_thread_blocked, id=16395, stack(0x00007f63c8aa4000,0x00007f63c8ba5000)]
+  0x00007f63c0006000 JavaThread "pool-3-thread-9" [_thread_blocked, id=16394, stack(0x00007f63c8da5000,0x00007f63c8ea6000)]
+  0x00007f63cc695800 JavaThread "pool-2-thread-10" [_thread_blocked, id=16393, stack(0x00007f63c8ea6000,0x00007f63c8fa7000)]
+  0x00007f63cc678000 JavaThread "pool-2-thread-9" [_thread_blocked, id=16392, stack(0x00007f63c8fa7000,0x00007f63c90a8000)]
+  0x00007f63cc676000 JavaThread "pool-2-thread-8" [_thread_blocked, id=16391, stack(0x00007f63c90a8000,0x00007f63c91a9000)]
+  0x00007f63cc672800 JavaThread "pool-2-thread-7" [_thread_blocked, id=16390, stack(0x00007f63c91a9000,0x00007f63c92aa000)]
+  0x00007f63cc65f800 JavaThread "pool-2-thread-6" [_thread_blocked, id=16389, stack(0x00007f63c92aa000,0x00007f63c93ab000)]
+  0x00007f63cc65e800 JavaThread "pool-2-thread-5" [_thread_blocked, id=16388, stack(0x00007f63c93ab000,0x00007f63c94ac000)]
+  0x00007f63cc668800 JavaThread "pool-2-thread-4" [_thread_blocked, id=16387, stack(0x00007f63c94ac000,0x00007f63c95ad000)]
+  0x00007f63cc667800 JavaThread "pool-2-thread-3" [_thread_blocked, id=16386, stack(0x00007f63c95ad000,0x00007f63c96ae000)]
+  0x00007f63b0001000 JavaThread "pool-3-thread-8" [_thread_blocked, id=16385, stack(0x00007f63c98ae000,0x00007f63c99af000)]
+  0x00007f63cc5ee800 JavaThread "pool-2-thread-2" [_thread_blocked, id=16384, stack(0x00007f63c99af000,0x00007f63c9ab0000)]
+  0x00007f63cc602000 JavaThread "pool-2-thread-1" [_thread_blocked, id=16383, stack(0x00007f63c9ab0000,0x00007f63c9bb1000)]
+  0x00007f63b8002800 JavaThread "pool-3-thread-7" [_thread_blocked, id=16382, stack(0x00007f63c9db1000,0x00007f63c9eb2000)]
+  0x00007f63bc001000 JavaThread "pool-3-thread-6" [_thread_blocked, id=16381, stack(0x00007f63c9eb2000,0x00007f63c9fb3000)]
+  0x00007f63c0004800 JavaThread "pool-3-thread-5" [_thread_blocked, id=16380, stack(0x00007f63c9fb3000,0x00007f63ca0b4000)]
+  0x00007f63b8001000 JavaThread "pool-3-thread-4" [_thread_blocked, id=16379, stack(0x00007f63ca0b4000,0x00007f63ca1b5000)]
+  0x00007f63c0003000 JavaThread "pool-3-thread-3" [_thread_blocked, id=16378, stack(0x00007f63ca3b5000,0x00007f63ca4b6000)]
+  0x00007f63c0001800 JavaThread "pool-3-thread-2" [_thread_blocked, id=16377, stack(0x00007f63ca6b6000,0x00007f63ca7b7000)]
+  0x00007f63cc368000 JavaThread "pool-3-thread-1" [_thread_blocked, id=16376, stack(0x00007f63ca7b7000,0x00007f63ca8b8000)]
+  0x00007f63cc16e800 JavaThread "AWT-XAWT" daemon [_thread_in_native, id=16375, stack(0x00007f64118a3000,0x00007f64119a4000)]
+  0x00007f63cc14d800 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=16374, stack(0x00007f6411fb4000,0x00007f64120b5000)]
+  0x00007f63e805c800 JavaThread "nREPL-worker-0" daemon [_thread_blocked, id=16336, stack(0x00007f641c705000,0x00007f641c806000)]
+  0x00007f63e0001000 JavaThread "clojure-agent-send-off-pool-4" [_thread_in_native, id=16334, stack(0x00007f641c806000,0x00007f641c907000)]
+  0x00007f63e8056800 JavaThread "clojure-agent-send-off-pool-3" [_thread_in_native, id=16333, stack(0x00007f641c907000,0x00007f641ca08000)]
+  0x00007f63e8007800 JavaThread "clojure-agent-send-off-pool-2" [_thread_blocked, id=16332, stack(0x00007f641ca08000,0x00007f641cb09000)]
+  0x00007f644c364800 JavaThread "clojure-agent-send-off-pool-1" [_thread_blocked, id=16327, stack(0x00007f641d1a6000,0x00007f641d2a7000)]
+  0x00007f644c361800 JavaThread "clojure-agent-send-off-pool-0" [_thread_blocked, id=16326, stack(0x00007f641d4ba000,0x00007f641d5bb000)]
+  0x00007f644c0cd000 JavaThread "Service Thread" daemon [_thread_blocked, id=16324, stack(0x00007f641db41000,0x00007f641dc42000)]
+  0x00007f644c0bf800 JavaThread "C1 CompilerThread3" daemon [_thread_blocked, id=16323, stack(0x00007f641dc42000,0x00007f641dd43000)]
+  0x00007f644c0bb000 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=16322, stack(0x00007f641dd43000,0x00007f641de44000)]
+  0x00007f644c0b9800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=16321, stack(0x00007f641de44000,0x00007f641df45000)]
+  0x00007f644c0b6800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=16320, stack(0x00007f641df45000,0x00007f641e046000)]
+  0x00007f644c0b4800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=16319, stack(0x00007f641e046000,0x00007f641e147000)]
+  0x00007f644c08c800 JavaThread "Finalizer" daemon [_thread_blocked, id=16318, stack(0x00007f641e41f000,0x00007f641e520000)]
+  0x00007f644c088000 JavaThread "Reference Handler" daemon [_thread_blocked, id=16317, stack(0x00007f641e520000,0x00007f641e621000)]
+  0x00007f644c00b000 JavaThread "main" [_thread_blocked, id=16304, stack(0x00007f6454af1000,0x00007f6454bf2000)]
+
+Other Threads:
+  0x00007f644c080800 VMThread [stack: 0x00007f641e621000,0x00007f641e722000] [id=16316]
+  0x00007f644c0cf800 WatcherThread [stack: 0x00007f641da40000,0x00007f641db41000] [id=16325]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 752640K, used 69425K [0x0000000791300000, 0x00000007c0000000, 0x00000007c0000000)
+  eden space 739328K, 9% used [0x0000000791300000,0x00000007956cc7a8,0x00000007be500000)
+  from space 13312K, 0% used [0x00000007bf300000,0x00000007bf300000,0x00000007c0000000)
+  to   space 13824K, 0% used [0x00000007be500000,0x00000007be500000,0x00000007bf280000)
+ ParOldGen       total 126976K, used 44553K [0x0000000733800000, 0x000000073b400000, 0x0000000791300000)
+  object space 126976K, 35% used [0x0000000733800000,0x0000000736382558,0x000000073b400000)
+ Metaspace       used 44152K, capacity 59513K, committed 59608K, reserved 1091584K
+  class space    used 12034K, capacity 17323K, committed 17408K, reserved 1048576K
+
+Card table byte_map: [0x00007f6450d53000,0x00007f64511b8000] byte_map_base: 0x00007f644d3b7000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f6453dc8220
+ Begin Bits: [0x00007f64139c0000, 0x00007f6415ce0000)
+ End Bits:   [0x00007f6415ce0000, 0x00007f6418000000)
+
+Polling page: 0x00007f6454c1a000
+
+CodeCache: size=245760Kb used=7872Kb max_used=7872Kb free=237887Kb
+ bounds [0x00007f643d000000, 0x00007f643d7c0000, 0x00007f644c000000]
+ total_blobs=3842 nmethods=3330 adapters=427
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 26.680 Thread 0x00007f644c0bf800 3326       1       java.util.concurrent.locks.AbstractQueuedSynchronizer::compareAndSetWaitStatus (13 bytes)
+Event: 26.681 Thread 0x00007f644c0bf800 nmethod 3326 0x00007f643d7af210 code [0x00007f643d7af360, 0x00007f643d7af470]
+Event: 26.681 Thread 0x00007f644c0bf800 3327       1       java.util.concurrent.ThreadPoolExecutor::runStateOf (5 bytes)
+Event: 26.681 Thread 0x00007f644c0bf800 nmethod 3327 0x00007f643d7af4d0 code [0x00007f643d7af620, 0x00007f643d7af710]
+Event: 27.083 Thread 0x00007f644c0bf800 3328       1       clojure.core$coll_QMARK_::invokeStatic (19 bytes)
+Event: 27.083 Thread 0x00007f644c0bf800 nmethod 3328 0x00007f643d7af750 code [0x00007f643d7af8a0, 0x00007f643d7af9f0]
+Event: 30.590 Thread 0x00007f644c0bf800 3330       1       java.math.BigInteger::valueOf (62 bytes)
+Event: 30.591 Thread 0x00007f644c0bf800 nmethod 3330 0x00007f643d7afa50 code [0x00007f643d7afbc0, 0x00007f643d7afe68]
+Event: 30.591 Thread 0x00007f644c0bf800 3329       1       clojure.lang.Numbers$BigIntOps::combine (8 bytes)
+Event: 30.592 Thread 0x00007f644c0bf800 nmethod 3329 0x00007f643d7affd0 code [0x00007f643d7b0140, 0x00007f643d7b0288]
+
+GC Heap History (10 events):
+Event: 18.218 GC heap before
+{Heap before GC invocations=11 (full 2):
+ PSYoungGen      total 526848K, used 512512K [0x0000000791300000, 0x00000007b2300000, 0x00000007c0000000)
+  eden space 512512K, 100% used [0x0000000791300000,0x00000007b0780000,0x00000007b0780000)
+  from space 14336K, 0% used [0x00000007b1500000,0x00000007b1500000,0x00000007b2300000)
+  to   space 13824K, 0% used [0x00000007b0780000,0x00000007b0780000,0x00000007b1500000)
+ ParOldGen       total 88064K, used 25410K [0x0000000733800000, 0x0000000738e00000, 0x0000000791300000)
+  object space 88064K, 28% used [0x0000000733800000,0x00000007350d0b50,0x0000000738e00000)
+ Metaspace       used 32963K, capacity 41087K, committed 41216K, reserved 1079296K
+  class space    used 8649K, capacity 11690K, committed 11776K, reserved 1048576K
+Event: 18.249 GC heap after
+Heap after GC invocations=11 (full 2):
+ PSYoungGen      total 526336K, used 6755K [0x0000000791300000, 0x00000007bfe80000, 0x00000007c0000000)
+  eden space 512512K, 0% used [0x0000000791300000,0x0000000791300000,0x00000007b0780000)
+  from space 13824K, 48% used [0x00000007b0780000,0x00000007b0e18e88,0x00000007b1500000)
+  to   space 13312K, 0% used [0x00000007bf180000,0x00000007bf180000,0x00000007bfe80000)
+ ParOldGen       total 88064K, used 25418K [0x0000000733800000, 0x0000000738e00000, 0x0000000791300000)
+  object space 88064K, 28% used [0x0000000733800000,0x00000007350d2b50,0x0000000738e00000)
+ Metaspace       used 32963K, capacity 41087K, committed 41216K, reserved 1079296K
+  class space    used 8649K, capacity 11690K, committed 11776K, reserved 1048576K
+}
+Event: 18.993 GC heap before
+{Heap before GC invocations=12 (full 2):
+ PSYoungGen      total 526336K, used 519267K [0x0000000791300000, 0x00000007bfe80000, 0x00000007c0000000)
+  eden space 512512K, 100% used [0x0000000791300000,0x00000007b0780000,0x00000007b0780000)
+  from space 13824K, 48% used [0x00000007b0780000,0x00000007b0e18e88,0x00000007b1500000)
+  to   space 13312K, 0% used [0x00000007bf180000,0x00000007bf180000,0x00000007bfe80000)
+ ParOldGen       total 88064K, used 25418K [0x0000000733800000, 0x0000000738e00000, 0x0000000791300000)
+  object space 88064K, 28% used [0x0000000733800000,0x00000007350d2b50,0x0000000738e00000)
+ Metaspace       used 33703K, capacity 42363K, committed 42624K, reserved 1079296K
+  class space    used 8901K, capacity 12082K, committed 12160K, reserved 1048576K
+Event: 19.007 GC heap after
+Heap after GC invocations=12 (full 2):
+ PSYoungGen      total 743424K, used 10397K [0x0000000791300000, 0x00000007bfc00000, 0x00000007c0000000)
+  eden space 732672K, 0% used [0x0000000791300000,0x0000000791300000,0x00000007bde80000)
+  from space 10752K, 96% used [0x00000007bf180000,0x00000007bfba74d0,0x00000007bfc00000)
+  to   space 13824K, 0% used [0x00000007be100000,0x00000007be100000,0x00000007bee80000)
+ ParOldGen       total 88064K, used 25426K [0x0000000733800000, 0x0000000738e00000, 0x0000000791300000)
+  object space 88064K, 28% used [0x0000000733800000,0x00000007350d4b50,0x0000000738e00000)
+ Metaspace       used 33703K, capacity 42363K, committed 42624K, reserved 1079296K
+  class space    used 8901K, capacity 12082K, committed 12160K, reserved 1048576K
+}
+Event: 21.840 GC heap before
+{Heap before GC invocations=13 (full 2):
+ PSYoungGen      total 743424K, used 743069K [0x0000000791300000, 0x00000007bfc00000, 0x00000007c0000000)
+  eden space 732672K, 100% used [0x0000000791300000,0x00000007bde80000,0x00000007bde80000)
+  from space 10752K, 96% used [0x00000007bf180000,0x00000007bfba74d0,0x00000007bfc00000)
+  to   space 13824K, 0% used [0x00000007be100000,0x00000007be100000,0x00000007bee80000)
+ ParOldGen       total 88064K, used 25426K [0x0000000733800000, 0x0000000738e00000, 0x0000000791300000)
+  object space 88064K, 28% used [0x0000000733800000,0x00000007350d4b50,0x0000000738e00000)
+ Metaspace       used 39676K, capacity 52369K, committed 52480K, reserved 1087488K
+  class space    used 10691K, capacity 15006K, committed 15104K, reserved 1048576K
+Event: 21.863 GC heap after
+Heap after GC invocations=13 (full 2):
+ PSYoungGen      total 749056K, used 7389K [0x0000000791300000, 0x00000007c0000000, 0x00000007c0000000)
+  eden space 735232K, 0% used [0x0000000791300000,0x0000000791300000,0x00000007be100000)
+  from space 13824K, 53% used [0x00000007be100000,0x00000007be8374d0,0x00000007bee80000)
+  to   space 13312K, 0% used [0x00000007bf300000,0x00000007bf300000,0x00000007c0000000)
+ ParOldGen       total 88064K, used 35537K [0x0000000733800000, 0x0000000738e00000, 0x0000000791300000)
+  object space 88064K, 40% used [0x0000000733800000,0x0000000735ab4580,0x0000000738e00000)
+ Metaspace       used 39676K, capacity 52369K, committed 52480K, reserved 1087488K
+  class space    used 10691K, capacity 15006K, committed 15104K, reserved 1048576K
+}
+Event: 23.395 GC heap before
+{Heap before GC invocations=14 (full 2):
+ PSYoungGen      total 749056K, used 211056K [0x0000000791300000, 0x00000007c0000000, 0x00000007c0000000)
+  eden space 735232K, 27% used [0x0000000791300000,0x000000079d9e4cf0,0x00000007be100000)
+  from space 13824K, 53% used [0x00000007be100000,0x00000007be8374d0,0x00000007bee80000)
+  to   space 13312K, 0% used [0x00000007bf300000,0x00000007bf300000,0x00000007c0000000)
+ ParOldGen       total 88064K, used 35537K [0x0000000733800000, 0x0000000738e00000, 0x0000000791300000)
+  object space 88064K, 40% used [0x0000000733800000,0x0000000735ab4580,0x0000000738e00000)
+ Metaspace       used 43704K, capacity 58993K, committed 59096K, reserved 1091584K
+  class space    used 11927K, capacity 17152K, committed 17152K, reserved 1048576K
+Event: 23.412 GC heap after
+Heap after GC invocations=14 (full 2):
+ PSYoungGen      total 752640K, used 3184K [0x0000000791300000, 0x00000007c0000000, 0x00000007c0000000)
+  eden space 739328K, 0% used [0x0000000791300000,0x0000000791300000,0x00000007be500000)
+  from space 13312K, 23% used [0x00000007bf300000,0x00000007bf61c030,0x00000007c0000000)
+  to   space 13824K, 0% used [0x00000007be500000,0x00000007be500000,0x00000007bf280000)
+ ParOldGen       total 88064K, used 42599K [0x0000000733800000, 0x0000000738e00000, 0x0000000791300000)
+  object space 88064K, 48% used [0x0000000733800000,0x0000000736199dd0,0x0000000738e00000)
+ Metaspace       used 43704K, capacity 58993K, committed 59096K, reserved 1091584K
+  class space    used 11927K, capacity 17152K, committed 17152K, reserved 1048576K
+}
+Event: 23.412 GC heap before
+{Heap before GC invocations=15 (full 3):
+ PSYoungGen      total 752640K, used 3184K [0x0000000791300000, 0x00000007c0000000, 0x00000007c0000000)
+  eden space 739328K, 0% used [0x0000000791300000,0x0000000791300000,0x00000007be500000)
+  from space 13312K, 23% used [0x00000007bf300000,0x00000007bf61c030,0x00000007c0000000)
+  to   space 13824K, 0% used [0x00000007be500000,0x00000007be500000,0x00000007bf280000)
+ ParOldGen       total 88064K, used 42599K [0x0000000733800000, 0x0000000738e00000, 0x0000000791300000)
+  object space 88064K, 48% used [0x0000000733800000,0x0000000736199dd0,0x0000000738e00000)
+ Metaspace       used 43704K, capacity 58993K, committed 59096K, reserved 1091584K
+  class space    used 11927K, capacity 17152K, committed 17152K, reserved 1048576K
+Event: 23.910 GC heap after
+Heap after GC invocations=15 (full 3):
+ PSYoungGen      total 752640K, used 0K [0x0000000791300000, 0x00000007c0000000, 0x00000007c0000000)
+  eden space 739328K, 0% used [0x0000000791300000,0x0000000791300000,0x00000007be500000)
+  from space 13312K, 0% used [0x00000007bf300000,0x00000007bf300000,0x00000007c0000000)
+  to   space 13824K, 0% used [0x00000007be500000,0x00000007be500000,0x00000007bf280000)
+ ParOldGen       total 126976K, used 44553K [0x0000000733800000, 0x000000073b400000, 0x0000000791300000)
+  object space 126976K, 35% used [0x0000000733800000,0x0000000736382558,0x000000073b400000)
+ Metaspace       used 43704K, capacity 58993K, committed 59096K, reserved 1091584K
+  class space    used 11927K, capacity 17152K, committed 17152K, reserved 1048576K
+}
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 0.170 Thread 0x00007f644c00b000 Exception <a 'java/security/PrivilegedActionException'> (0x00000007919d14b0) thrown at [/build/openjdk-8-YiEakL/openjdk-8-8u121-b13/src/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 0.170 Thread 0x00007f644c00b000 Exception <a 'java/security/PrivilegedActionException'> (0x00000007919d16c0) thrown at [/build/openjdk-8-YiEakL/openjdk-8-8u121-b13/src/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 1.838 Thread 0x00007f644c364800 Exception <a 'java/io/FileNotFoundException'> (0x0000000793643718) thrown at [/build/openjdk-8-YiEakL/openjdk-8-8u121-b13/src/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 1.841 Thread 0x00007f644c361800 Exception <a 'java/io/FileNotFoundException'> (0x00000007937c0568) thrown at [/build/openjdk-8-YiEakL/openjdk-8-8u121-b13/src/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 3.878 Thread 0x00007f644c364800 Exception <a 'java/net/SocketException': Socket closed> (0x00000007960a21e0) thrown at [/build/openjdk-8-YiEakL/openjdk-8-8u121-b13/src/hotspot/src/share/vm/prims/jni.cpp, line 735]
+Event: 14.383 Thread 0x00007f63e805c800 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x0000000798bb03f8) thrown at [/build/openjdk-8-YiEakL/openjdk-8-8u121-b13/src/hotspot/src/share/vm/prims/methodHandles.cpp, line 1146]
+Event: 14.385 Thread 0x00007f63e805c800 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x0000000798bbe9b8) thrown at [/build/openjdk-8-YiEakL/openjdk-8-8u121-b13/src/hotspot/src/share/vm/prims/methodHandles.cpp, line 1146]
+Event: 14.420 Thread 0x00007f63e805c800 Exception <a 'java/io/FileNotFoundException'> (0x0000000798c40138) thrown at [/build/openjdk-8-YiEakL/openjdk-8-8u121-b13/src/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 14.420 Thread 0x00007f63e805c800 Exception <a 'java/io/FileNotFoundException'> (0x0000000798c41280) thrown at [/build/openjdk-8-YiEakL/openjdk-8-8u121-b13/src/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 14.551 Thread 0x00007f63e805c800 Exception <a 'java/lang/ClassNotFoundException': sun/dc/DuctusRenderingEngine> (0x0000000798cac1c8) thrown at [/build/openjdk-8-YiEakL/openjdk-8-8u121-b13/src/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 210]
+
+Events (10 events):
+Event: 24.096 loading class com/sun/jna/WeakIdentityHashMap done
+Event: 24.096 loading class com/sun/jna/Memory$SharedMemory
+Event: 24.096 loading class com/sun/jna/Memory$SharedMemory done
+Event: 24.102 loading class com/sun/jna/Structure$2$StructureSet
+Event: 24.102 loading class com/sun/jna/Structure$2$StructureSet done
+Event: 24.102 loading class com/sun/jna/NativeString
+Event: 24.102 loading class com/sun/jna/NativeString done
+Event: 30.591 Executing VM operation: RevokeBias
+Event: 30.592 Executing VM operation: RevokeBias done
+Event: 30.592 loading class sun/misc/Signal$1
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:04 37490432                           /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+00600000-00601000 r--p 00000000 08:04 37490432                           /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+00601000-00602000 rw-p 00001000 08:04 37490432                           /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+00fd3000-00ff4000 rw-p 00000000 00:00 0                                  [heap]
+733800000-73b400000 rw-p 00000000 00:00 0 
+73b400000-791300000 ---p 00000000 00:00 0 
+791300000-7c0000000 rw-p 00000000 00:00 0 
+7c0000000-7c1100000 rw-p 00000000 00:00 0 
+7c1100000-800000000 ---p 00000000 00:00 0 
+7f6338000000-7f6338021000 rw-p 00000000 00:00 0 
+7f6338021000-7f633c000000 ---p 00000000 00:00 0 
+7f6340000000-7f6340021000 rw-p 00000000 00:00 0 
+7f6340021000-7f6344000000 ---p 00000000 00:00 0 
+7f6347fff000-7f6358000000 rw-p 00000000 00:00 0 
+7f6358000000-7f6358022000 rw-p 00000000 00:00 0 
+7f6358022000-7f635c000000 ---p 00000000 00:00 0 
+7f635e7d9000-7f635e7da000 ---p 00000000 00:00 0 
+7f635e7da000-7f635efda000 rw-p 00000000 00:00 0 
+7f635efda000-7f635efdb000 ---p 00000000 00:00 0 
+7f635efdb000-7f635f7db000 rw-p 00000000 00:00 0 
+7f635f7db000-7f635f7e0000 r-xp 00000000 08:04 9835485                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BhobFFT.so
+7f635f7e0000-7f635f9df000 ---p 00005000 08:04 9835485                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BhobFFT.so
+7f635f9df000-7f635f9e0000 r--p 00004000 08:04 9835485                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BhobFFT.so
+7f635f9e0000-7f635f9e1000 rw-p 00005000 08:04 9835485                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BhobFFT.so
+7f635f9e1000-7f635f9ed000 rw-p 00000000 00:00 0 
+7f635f9ed000-7f635f9ef000 r-xp 00000000 08:04 9835506                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDOscUGens.so
+7f635f9ef000-7f635fbee000 ---p 00002000 08:04 9835506                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDOscUGens.so
+7f635fbee000-7f635fbef000 r--p 00001000 08:04 9835506                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDOscUGens.so
+7f635fbef000-7f635fbf0000 rw-p 00002000 08:04 9835506                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDOscUGens.so
+7f635fbf0000-7f635fbf4000 r-xp 00000000 08:04 9835478                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/AY_UGen.so
+7f635fbf4000-7f635fdf3000 ---p 00004000 08:04 9835478                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/AY_UGen.so
+7f635fdf3000-7f635fdf4000 r--p 00003000 08:04 9835478                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/AY_UGen.so
+7f635fdf4000-7f635fdf5000 rw-p 00004000 08:04 9835478                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/AY_UGen.so
+7f635fdf5000-7f635fdf7000 rw-p 00000000 00:00 0 
+7f635fdf7000-7f635fdff000 r-xp 00000000 08:04 9835522                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/VBAP.so
+7f635fdff000-7f635fffe000 ---p 00008000 08:04 9835522                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/VBAP.so
+7f635fffe000-7f635ffff000 r--p 00007000 08:04 9835522                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/VBAP.so
+7f635ffff000-7f6360000000 rw-p 00008000 08:04 9835522                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/VBAP.so
+7f6360000000-7f6360021000 rw-p 00000000 00:00 0 
+7f6360021000-7f6364000000 ---p 00000000 00:00 0 
+7f63640fa000-7f63640fd000 ---p 00000000 00:00 0 
+7f63640fd000-7f63641fb000 rw-p 00000000 00:00 0 
+7f63641fb000-7f6364201000 r-xp 00000000 08:04 9835655                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/PV_ThirdParty.so
+7f6364201000-7f6364401000 ---p 00006000 08:04 9835655                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/PV_ThirdParty.so
+7f6364401000-7f6364402000 r--p 00006000 08:04 9835655                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/PV_ThirdParty.so
+7f6364402000-7f6364403000 rw-p 00007000 08:04 9835655                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/PV_ThirdParty.so
+7f6364403000-7f6364433000 rw-p 00000000 00:00 0 
+7f6364433000-7f636443b000 r-xp 00000000 08:04 9835521                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/TJUGens.so
+7f636443b000-7f636463a000 ---p 00008000 08:04 9835521                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/TJUGens.so
+7f636463a000-7f636463b000 r--p 00007000 08:04 9835521                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/TJUGens.so
+7f636463b000-7f636463c000 rw-p 00008000 08:04 9835521                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/TJUGens.so
+7f636463c000-7f6364646000 r-xp 00000000 08:04 9835503                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDFFTUGens.so
+7f6364646000-7f6364845000 ---p 0000a000 08:04 9835503                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDFFTUGens.so
+7f6364845000-7f6364846000 r--p 00009000 08:04 9835503                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDFFTUGens.so
+7f6364846000-7f6364847000 rw-p 0000a000 08:04 9835503                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDFFTUGens.so
+7f6364847000-7f6364853000 rw-p 00000000 00:00 0 
+7f6364853000-7f636485f000 r-xp 00000000 08:04 9835637                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/DemandUGens.so
+7f636485f000-7f6364a5f000 ---p 0000c000 08:04 9835637                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/DemandUGens.so
+7f6364a5f000-7f6364a60000 r--p 0000c000 08:04 9835637                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/DemandUGens.so
+7f6364a60000-7f6364a61000 rw-p 0000d000 08:04 9835637                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/DemandUGens.so
+7f6364a61000-7f6364a63000 r-xp 00000000 08:04 9835502                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDDistortionUGens.so
+7f6364a63000-7f6364c62000 ---p 00002000 08:04 9835502                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDDistortionUGens.so
+7f6364c62000-7f6364c63000 r--p 00001000 08:04 9835502                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDDistortionUGens.so
+7f6364c63000-7f6364c64000 rw-p 00002000 08:04 9835502                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDDistortionUGens.so
+7f6364c64000-7f6364c7f000 r-xp 00000000 08:04 9835477                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/AtkUGens.so
+7f6364c7f000-7f6364e7f000 ---p 0001b000 08:04 9835477                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/AtkUGens.so
+7f6364e7f000-7f6364e80000 r--p 0001b000 08:04 9835477                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/AtkUGens.so
+7f6364e80000-7f6364e81000 rw-p 0001c000 08:04 9835477                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/AtkUGens.so
+7f6364e81000-7f6364e82000 ---p 00000000 00:00 0 
+7f6364e82000-7f6365682000 rw-p 00000000 00:00 0 
+7f6365682000-7f6365685000 r-xp 00000000 08:04 9835649                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MouseUGens.so
+7f6365685000-7f6365884000 ---p 00003000 08:04 9835649                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MouseUGens.so
+7f6365884000-7f6365885000 r--p 00002000 08:04 9835649                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MouseUGens.so
+7f6365885000-7f6365886000 rw-p 00003000 08:04 9835649                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MouseUGens.so
+7f6365886000-7f6365888000 r-xp 00000000 08:04 9835510                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDTriggeredStatsUgens.so
+7f6365888000-7f6365a87000 ---p 00002000 08:04 9835510                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDTriggeredStatsUgens.so
+7f6365a87000-7f6365a88000 r--p 00001000 08:04 9835510                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDTriggeredStatsUgens.so
+7f6365a88000-7f6365a89000 rw-p 00002000 08:04 9835510                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDTriggeredStatsUgens.so
+7f6365a89000-7f6365a8d000 r-xp 00000000 08:04 9835499                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDBufferUGens.so
+7f6365a8d000-7f6365c8c000 ---p 00004000 08:04 9835499                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDBufferUGens.so
+7f6365c8c000-7f6365c8d000 r--p 00003000 08:04 9835499                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDBufferUGens.so
+7f6365c8d000-7f6365c8e000 rw-p 00004000 08:04 9835499                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDBufferUGens.so
+7f6365c8e000-7f6365cbc000 r-xp 00000000 08:04 9835636                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/DelayUGens.so
+7f6365cbc000-7f6365ebc000 ---p 0002e000 08:04 9835636                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/DelayUGens.so
+7f6365ebc000-7f6365ebd000 r--p 0002e000 08:04 9835636                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/DelayUGens.so
+7f6365ebd000-7f6365ebe000 rw-p 0002f000 08:04 9835636                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/DelayUGens.so
+7f6365ebe000-7f6365ec0000 r-xp 00000000 08:04 9835497                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/LadspaUGen.so
+7f6365ec0000-7f63660c0000 ---p 00002000 08:04 9835497                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/LadspaUGen.so
+7f63660c0000-7f63660c1000 r--p 00002000 08:04 9835497                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/LadspaUGen.so
+7f63660c1000-7f63660c2000 rw-p 00003000 08:04 9835497                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/LadspaUGen.so
+7f63660c2000-7f63660cc000 r-xp 00000000 08:04 9835648                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/ML_UGens.so
+7f63660cc000-7f63662cb000 ---p 0000a000 08:04 9835648                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/ML_UGens.so
+7f63662cb000-7f63662cc000 r--p 00009000 08:04 9835648                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/ML_UGens.so
+7f63662cc000-7f63662d4000 rw-p 0000a000 08:04 9835648                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/ML_UGens.so
+7f63662d4000-7f6366310000 rw-p 00000000 00:00 0 
+7f6366310000-7f6366316000 r-xp 00000000 08:04 9835651                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/NoiseUGens.so
+7f6366316000-7f6366515000 ---p 00006000 08:04 9835651                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/NoiseUGens.so
+7f6366515000-7f6366516000 r--p 00005000 08:04 9835651                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/NoiseUGens.so
+7f6366516000-7f6366517000 rw-p 00006000 08:04 9835651                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/NoiseUGens.so
+7f6366517000-7f6366519000 r-xp 00000000 08:04 9835515                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/RFWUGens.so
+7f6366519000-7f6366718000 ---p 00002000 08:04 9835515                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/RFWUGens.so
+7f6366718000-7f6366719000 r--p 00001000 08:04 9835515                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/RFWUGens.so
+7f6366719000-7f636671a000 rw-p 00002000 08:04 9835515                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/RFWUGens.so
+7f636671a000-7f636672d000 r-xp 00000000 08:04 9835659                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/UnaryOpUGens.so
+7f636672d000-7f636692d000 ---p 00013000 08:04 9835659                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/UnaryOpUGens.so
+7f636692d000-7f636692e000 r--p 00013000 08:04 9835659                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/UnaryOpUGens.so
+7f636692e000-7f636692f000 rw-p 00014000 08:04 9835659                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/UnaryOpUGens.so
+7f636692f000-7f6366932000 r-xp 00000000 08:04 9835492                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/GlitchUGens.so
+7f6366932000-7f6366b31000 ---p 00003000 08:04 9835492                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/GlitchUGens.so
+7f6366b31000-7f6366b32000 r--p 00002000 08:04 9835492                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/GlitchUGens.so
+7f6366b32000-7f6366b33000 rw-p 00003000 08:04 9835492                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/GlitchUGens.so
+7f6366b33000-7f6366b41000 r-xp 00000000 08:04 9835517                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/SLUGens.so
+7f6366b41000-7f6366d40000 ---p 0000e000 08:04 9835517                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/SLUGens.so
+7f6366d40000-7f6366d41000 r--p 0000d000 08:04 9835517                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/SLUGens.so
+7f6366d41000-7f6366d42000 rw-p 0000e000 08:04 9835517                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/SLUGens.so
+7f6366d42000-7f6366d4f000 r-xp 00000000 08:04 9835513                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/NCAnalysisUGens.so
+7f6366d4f000-7f6366f4e000 ---p 0000d000 08:04 9835513                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/NCAnalysisUGens.so
+7f6366f4e000-7f6366f4f000 r--p 0000c000 08:04 9835513                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/NCAnalysisUGens.so
+7f6366f4f000-7f6366f50000 rw-p 0000d000 08:04 9835513                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/NCAnalysisUGens.so
+7f6366f50000-7f6366f9b000 rw-p 00000000 00:00 0 
+7f6366f9b000-7f6366fad000 r-xp 00000000 08:04 9835646                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/LFUGens.so
+7f6366fad000-7f63671ad000 ---p 00012000 08:04 9835646                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/LFUGens.so
+7f63671ad000-7f63671ae000 r--p 00012000 08:04 9835646                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/LFUGens.so
+7f63671ae000-7f63671af000 rw-p 00013000 08:04 9835646                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/LFUGens.so
+7f63671af000-7f63671b3000 r-xp 00000000 08:04 9835520                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/TagSystemUgens.so
+7f63671b3000-7f63673b2000 ---p 00004000 08:04 9835520                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/TagSystemUgens.so
+7f63673b2000-7f63673b3000 r--p 00003000 08:04 9835520                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/TagSystemUgens.so
+7f63673b3000-7f63673b4000 rw-p 00004000 08:04 9835520                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/TagSystemUgens.so
+7f63673b4000-7f63673b6000 r-xp 00000000 08:04 9835507                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDPollUGens.so
+7f63673b6000-7f63675b5000 ---p 00002000 08:04 9835507                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDPollUGens.so
+7f63675b5000-7f63675b6000 r--p 00001000 08:04 9835507                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDPollUGens.so
+7f63675b6000-7f63675b7000 rw-p 00002000 08:04 9835507                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDPollUGens.so
+7f63675b7000-7f63675cf000 r-xp 00000000 08:04 9835643                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/GrainUGens.so
+7f63675cf000-7f63677ce000 ---p 00018000 08:04 9835643                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/GrainUGens.so
+7f63677ce000-7f63677cf000 r--p 00017000 08:04 9835643                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/GrainUGens.so
+7f63677cf000-7f63677d0000 rw-p 00018000 08:04 9835643                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/GrainUGens.so
+7f63677d0000-7f63677d3000 r-xp 00000000 08:04 9835523                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/VOSIM.so
+7f63677d3000-7f63679d2000 ---p 00003000 08:04 9835523                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/VOSIM.so
+7f63679d2000-7f63679d3000 r--p 00002000 08:04 9835523                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/VOSIM.so
+7f63679d3000-7f63679d4000 rw-p 00003000 08:04 9835523                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/VOSIM.so
+7f63679d4000-7f63679d5000 ---p 00000000 00:00 0 
+7f63679d5000-7f63681d5000 rw-p 00000000 00:00 0 
+7f63681d5000-7f63681d6000 r-xp 00000000 08:04 9835645                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/KeyboardUGens.so
+7f63681d6000-7f63683d6000 ---p 00001000 08:04 9835645                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/KeyboardUGens.so
+7f63683d6000-7f63683d7000 r--p 00001000 08:04 9835645                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/KeyboardUGens.so
+7f63683d7000-7f63683d8000 rw-p 00002000 08:04 9835645                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/KeyboardUGens.so
+7f63683d8000-7f63683e8000 r-xp 00000000 08:04 9835493                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/JoshAmbiUGens.so
+7f63683e8000-7f63685e7000 ---p 00010000 08:04 9835493                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/JoshAmbiUGens.so
+7f63685e7000-7f63685e8000 r--p 0000f000 08:04 9835493                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/JoshAmbiUGens.so
+7f63685e8000-7f63685e9000 rw-p 00010000 08:04 9835493                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/JoshAmbiUGens.so
+7f63685e9000-7f63685ec000 r-xp 00000000 08:04 9835509                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDTreeUGens.so
+7f63685ec000-7f63687eb000 ---p 00003000 08:04 9835509                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDTreeUGens.so
+7f63687eb000-7f63687ec000 r--p 00002000 08:04 9835509                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDTreeUGens.so
+7f63687ec000-7f63687ed000 rw-p 00003000 08:04 9835509                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDTreeUGens.so
+7f63687ed000-7f63687f0000 r-xp 00000000 08:04 9835511                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MdaUGens.so
+7f63687f0000-7f63689ef000 ---p 00003000 08:04 9835511                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MdaUGens.so
+7f63689ef000-7f63689f0000 r--p 00002000 08:04 9835511                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MdaUGens.so
+7f63689f0000-7f6368b0f000 rw-p 00003000 08:04 9835511                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MdaUGens.so
+7f6368b0f000-7f6368b21000 r-xp 00000000 08:04 9835482                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BerlachUGens.so
+7f6368b21000-7f6368d20000 ---p 00012000 08:04 9835482                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BerlachUGens.so
+7f6368d20000-7f6368d21000 r--p 00011000 08:04 9835482                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BerlachUGens.so
+7f6368d21000-7f6368d22000 rw-p 00012000 08:04 9835482                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BerlachUGens.so
+7f6368d22000-7f6368d27000 r-xp 00000000 08:04 9835501                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDChaosUGens.so
+7f6368d27000-7f6368f26000 ---p 00005000 08:04 9835501                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDChaosUGens.so
+7f6368f26000-7f6368f27000 r--p 00004000 08:04 9835501                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDChaosUGens.so
+7f6368f27000-7f6368f28000 rw-p 00005000 08:04 9835501                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDChaosUGens.so
+7f6368f28000-7f6368f2b000 r-xp 00000000 08:04 9835642                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/GendynUGens.so
+7f6368f2b000-7f636912a000 ---p 00003000 08:04 9835642                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/GendynUGens.so
+7f636912a000-7f636912b000 r--p 00002000 08:04 9835642                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/GendynUGens.so
+7f636912b000-7f636912c000 rw-p 00003000 08:04 9835642                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/GendynUGens.so
+7f636912c000-7f636912e000 r-xp 00000000 08:04 9835505                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDGetenvUGen.so
+7f636912e000-7f636932d000 ---p 00002000 08:04 9835505                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDGetenvUGen.so
+7f636932d000-7f636932e000 r--p 00001000 08:04 9835505                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDGetenvUGen.so
+7f636932e000-7f636932f000 rw-p 00002000 08:04 9835505                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDGetenvUGen.so
+7f636932f000-7f6369331000 r-xp 00000000 08:04 9835660                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/UnpackFFTUGens.so
+7f6369331000-7f6369530000 ---p 00002000 08:04 9835660                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/UnpackFFTUGens.so
+7f6369530000-7f6369531000 r--p 00001000 08:04 9835660                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/UnpackFFTUGens.so
+7f6369531000-7f6369532000 rw-p 00002000 08:04 9835660                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/UnpackFFTUGens.so
+7f6369532000-7f636953e000 rw-p 00000000 00:00 0 
+7f636953e000-7f6369544000 r-xp 00000000 08:04 9835650                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MulAddUGens.so
+7f6369544000-7f6369743000 ---p 00006000 08:04 9835650                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MulAddUGens.so
+7f6369743000-7f6369744000 r--p 00005000 08:04 9835650                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MulAddUGens.so
+7f6369744000-7f6369745000 rw-p 00006000 08:04 9835650                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MulAddUGens.so
+7f6369745000-7f6369746000 ---p 00000000 00:00 0 
+7f6369746000-7f6369f46000 rw-p 00000000 00:00 0 
+7f6369f46000-7f6369f49000 r-xp 00000000 08:04 9835638                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/DiskIO_UGens.so
+7f6369f49000-7f636a149000 ---p 00003000 08:04 9835638                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/DiskIO_UGens.so
+7f636a149000-7f636a14a000 r--p 00003000 08:04 9835638                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/DiskIO_UGens.so
+7f636a14a000-7f636a14b000 rw-p 00004000 08:04 9835638                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/DiskIO_UGens.so
+7f636a14b000-7f636a14c000 rw-p 00000000 00:00 0 
+7f636a14c000-7f636a150000 r-xp 00000000 08:04 9835476                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/AmbisonicUGens.so
+7f636a150000-7f636a350000 ---p 00004000 08:04 9835476                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/AmbisonicUGens.so
+7f636a350000-7f636a351000 r--p 00004000 08:04 9835476                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/AmbisonicUGens.so
+7f636a351000-7f636a352000 rw-p 00005000 08:04 9835476                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/AmbisonicUGens.so
+7f636a352000-7f636a370000 r-xp 00000000 08:04 9835496                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/JoshUGens.so
+7f636a370000-7f636a570000 ---p 0001e000 08:04 9835496                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/JoshUGens.so
+7f636a570000-7f636a571000 r--p 0001e000 08:04 9835496                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/JoshUGens.so
+7f636a571000-7f636a572000 rw-p 0001f000 08:04 9835496                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/JoshUGens.so
+7f636a572000-7f636a577000 r-xp 00000000 08:04 9835490                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/Concat.so
+7f636a577000-7f636a776000 ---p 00005000 08:04 9835490                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/Concat.so
+7f636a776000-7f636a777000 r--p 00004000 08:04 9835490                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/Concat.so
+7f636a777000-7f636a778000 rw-p 00005000 08:04 9835490                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/Concat.so
+7f636a778000-7f636a77c000 r-xp 00000000 08:04 9835480                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BatUGens.so
+7f636a77c000-7f636a97b000 ---p 00004000 08:04 9835480                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BatUGens.so
+7f636a97b000-7f636a97c000 r--p 00003000 08:04 9835480                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BatUGens.so
+7f636a97c000-7f636a97d000 rw-p 00004000 08:04 9835480                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BatUGens.so
+7f636a97d000-7f636a983000 r-xp 00000000 08:04 9835488                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BhobNoise.so
+7f636a983000-7f636ab82000 ---p 00006000 08:04 9835488                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BhobNoise.so
+7f636ab82000-7f636ab83000 r--p 00005000 08:04 9835488                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BhobNoise.so
+7f636ab83000-7f636ab84000 rw-p 00006000 08:04 9835488                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BhobNoise.so
+7f636ab84000-7f636ab87000 r-xp 00000000 08:04 9835519                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/SummerUGens.so
+7f636ab87000-7f636ad87000 ---p 00003000 08:04 9835519                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/SummerUGens.so
+7f636ad87000-7f636ad88000 r--p 00003000 08:04 9835519                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/SummerUGens.so
+7f636ad88000-7f636ad89000 rw-p 00004000 08:04 9835519                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/SummerUGens.so
+7f636ad89000-7f636ad8d000 r-xp 00000000 08:04 9835508                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDSOMUGens.so
+7f636ad8d000-7f636af8c000 ---p 00004000 08:04 9835508                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDSOMUGens.so
+7f636af8c000-7f636af8d000 r--p 00003000 08:04 9835508                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDSOMUGens.so
+7f636af8d000-7f636af8e000 rw-p 00004000 08:04 9835508                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDSOMUGens.so
+7f636af8e000-7f636af9a000 r-xp 00000000 08:04 9835658                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/TriggerUGens.so
+7f636af9a000-7f636b199000 ---p 0000c000 08:04 9835658                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/TriggerUGens.so
+7f636b199000-7f636b19a000 r--p 0000b000 08:04 9835658                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/TriggerUGens.so
+7f636b19a000-7f636b19b000 rw-p 0000c000 08:04 9835658                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/TriggerUGens.so
+7f636b19b000-7f636b1a2000 r-xp 00000000 08:04 9835635                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/ChaosUGens.so
+7f636b1a2000-7f636b3a1000 ---p 00007000 08:04 9835635                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/ChaosUGens.so
+7f636b3a1000-7f636b3a2000 r--p 00006000 08:04 9835635                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/ChaosUGens.so
+7f636b3a2000-7f636b3a3000 rw-p 00007000 08:04 9835635                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/ChaosUGens.so
+7f636b3a3000-7f636b3a5000 r-xp 00000000 08:04 9835657                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/TestUGens.so
+7f636b3a5000-7f636b5a4000 ---p 00002000 08:04 9835657                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/TestUGens.so
+7f636b5a4000-7f636b5a5000 r--p 00001000 08:04 9835657                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/TestUGens.so
+7f636b5a5000-7f636b5a6000 rw-p 00002000 08:04 9835657                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/TestUGens.so
+7f636b5a6000-7f636b5ae000 r-xp 00000000 08:04 9835516                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/RMEQSuite.so
+7f636b5ae000-7f636b7ad000 ---p 00008000 08:04 9835516                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/RMEQSuite.so
+7f636b7ad000-7f636b7ae000 r--p 00007000 08:04 9835516                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/RMEQSuite.so
+7f636b7ae000-7f636b7af000 rw-p 00008000 08:04 9835516                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/RMEQSuite.so
+7f636b7af000-7f636b7cb000 r-xp 00000000 08:04 9835641                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/FilterUGens.so
+7f636b7cb000-7f636b9ca000 ---p 0001c000 08:04 9835641                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/FilterUGens.so
+7f636b9ca000-7f636b9cb000 r--p 0001b000 08:04 9835641                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/FilterUGens.so
+7f636b9cb000-7f636b9cc000 rw-p 0001c000 08:04 9835641                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/FilterUGens.so
+7f636b9cc000-7f636b9df000 r-xp 00000000 08:04 9835495                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/JoshPVUGens.so
+7f636b9df000-7f636bbde000 ---p 00013000 08:04 9835495                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/JoshPVUGens.so
+7f636bbde000-7f636bbdf000 r--p 00012000 08:04 9835495                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/JoshPVUGens.so
+7f636bbdf000-7f636bbe0000 rw-p 00013000 08:04 9835495                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/JoshPVUGens.so
+7f636bbe0000-7f636bbec000 rw-p 00000000 00:00 0 
+7f636bbec000-7f636bbef000 r-xp 00000000 08:04 9835500                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDCepstrumUGens.so
+7f636bbef000-7f636bdee000 ---p 00003000 08:04 9835500                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDCepstrumUGens.so
+7f636bdee000-7f636bdef000 r--p 00002000 08:04 9835500                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDCepstrumUGens.so
+7f636bdef000-7f636bdf0000 rw-p 00003000 08:04 9835500                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDCepstrumUGens.so
+7f636bdf0000-7f636bdfc000 rw-p 00000000 00:00 0 
+7f636bdfc000-7f636bdff000 r-xp 00000000 08:04 9835504                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDFilterUGens.so
+7f636bdff000-7f636bffe000 ---p 00003000 08:04 9835504                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDFilterUGens.so
+7f636bffe000-7f636bfff000 r--p 00002000 08:04 9835504                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDFilterUGens.so
+7f636bfff000-7f636c000000 rw-p 00003000 08:04 9835504                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MCLDFilterUGens.so
+7f636c000000-7f636c0f2000 rw-p 00000000 00:00 0 
+7f636c0f2000-7f6370000000 ---p 00000000 00:00 0 
+7f6370000000-7f6370021000 rw-p 00000000 00:00 0 
+7f6370021000-7f6374000000 ---p 00000000 00:00 0 
+7f63740e5000-7f63740e7000 r-xp 00000000 08:04 9835654                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/PhysicalModelingUGens.so
+7f63740e7000-7f63742e6000 ---p 00002000 08:04 9835654                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/PhysicalModelingUGens.so
+7f63742e6000-7f63742e7000 r--p 00001000 08:04 9835654                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/PhysicalModelingUGens.so
+7f63742e7000-7f63742e8000 rw-p 00002000 08:04 9835654                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/PhysicalModelingUGens.so
+7f63742e8000-7f63742eb000 r-xp 00000000 08:04 9835491                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/DistortionUGens.so
+7f63742eb000-7f63744ea000 ---p 00003000 08:04 9835491                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/DistortionUGens.so
+7f63744ea000-7f63744eb000 r--p 00002000 08:04 9835491                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/DistortionUGens.so
+7f63744eb000-7f63744ec000 rw-p 00003000 08:04 9835491                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/DistortionUGens.so
+7f63744ec000-7f637451e000 r-xp 00000000 08:04 9835634                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BinaryOpUGens.so
+7f637451e000-7f637471e000 ---p 00032000 08:04 9835634                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BinaryOpUGens.so
+7f637471e000-7f637471f000 r--p 00032000 08:04 9835634                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BinaryOpUGens.so
+7f637471f000-7f6374720000 rw-p 00033000 08:04 9835634                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BinaryOpUGens.so
+7f6374720000-7f6374728000 r-xp 00000000 08:04 9835653                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/PanUGens.so
+7f6374728000-7f6374927000 ---p 00008000 08:04 9835653                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/PanUGens.so
+7f6374927000-7f6374928000 r--p 00007000 08:04 9835653                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/PanUGens.so
+7f6374928000-7f6374929000 rw-p 00008000 08:04 9835653                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/PanUGens.so
+7f6374929000-7f637492b000 r-xp 00000000 08:04 9835479                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BatPVUgens.so
+7f637492b000-7f6374b2a000 ---p 00002000 08:04 9835479                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BatPVUgens.so
+7f6374b2a000-7f6374b2b000 r--p 00001000 08:04 9835479                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BatPVUgens.so
+7f6374b2b000-7f6374b2c000 rw-p 00002000 08:04 9835479                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BatPVUgens.so
+7f6374b2c000-7f6374b38000 rw-p 00000000 00:00 0 
+7f6374b38000-7f6374b3b000 r-xp 00000000 08:04 9835489                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BlackrainUGens.so
+7f6374b3b000-7f6374d3b000 ---p 00003000 08:04 9835489                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BlackrainUGens.so
+7f6374d3b000-7f6374d3c000 r--p 00003000 08:04 9835489                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BlackrainUGens.so
+7f6374d3c000-7f6374d3d000 rw-p 00004000 08:04 9835489                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BlackrainUGens.so
+7f6374d3d000-7f6374d48000 r-xp 00000000 08:04 9835484                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BhobChaos.so
+7f6374d48000-7f6374f47000 ---p 0000b000 08:04 9835484                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BhobChaos.so
+7f6374f47000-7f6374f48000 r--p 0000a000 08:04 9835484                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BhobChaos.so
+7f6374f48000-7f6374f49000 rw-p 0000b000 08:04 9835484                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BhobChaos.so
+7f6374f49000-7f6374f4c000 r-xp 00000000 08:04 9835498                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/LoopBuf.so
+7f6374f4c000-7f637514b000 ---p 00003000 08:04 9835498                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/LoopBuf.so
+7f637514b000-7f637514c000 r--p 00002000 08:04 9835498                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/LoopBuf.so
+7f637514c000-7f637514d000 rw-p 00003000 08:04 9835498                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/LoopBuf.so
+7f637514d000-7f6375163000 r-xp 00000000 08:04 9835486                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BhobFilt.so
+7f6375163000-7f6375362000 ---p 00016000 08:04 9835486                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BhobFilt.so
+7f6375362000-7f6375363000 r--p 00015000 08:04 9835486                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BhobFilt.so
+7f6375363000-7f6375364000 rw-p 00016000 08:04 9835486                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BhobFilt.so
+7f6375364000-7f6375426000 r-xp 00000000 08:04 9835518                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/StkUGens.so
+7f6375426000-7f6375625000 ---p 000c2000 08:04 9835518                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/StkUGens.so
+7f6375625000-7f6375629000 r--p 000c1000 08:04 9835518                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/StkUGens.so
+7f6375629000-7f637562e000 rw-p 000c5000 08:04 9835518                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/StkUGens.so
+7f637562e000-7f637563a000 r-xp 00000000 08:04 9835640                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/FFT_UGens.so
+7f637563a000-7f637583a000 ---p 0000c000 08:04 9835640                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/FFT_UGens.so
+7f637583a000-7f637583b000 r--p 0000c000 08:04 9835640                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/FFT_UGens.so
+7f637583b000-7f637583c000 rw-p 0000d000 08:04 9835640                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/FFT_UGens.so
+7f637583c000-7f637586c000 rw-p 00000000 00:00 0 
+7f637586c000-7f6375872000 r-xp 00000000 08:04 9835644                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/IOUGens.so
+7f6375872000-7f6375a72000 ---p 00006000 08:04 9835644                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/IOUGens.so
+7f6375a72000-7f6375a73000 r--p 00006000 08:04 9835644                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/IOUGens.so
+7f6375a73000-7f6375a74000 rw-p 00007000 08:04 9835644                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/IOUGens.so
+7f6375a74000-7f6375a7a000 r-xp 00000000 08:04 9835656                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/ReverbUGens.so
+7f6375a7a000-7f6375c79000 ---p 00006000 08:04 9835656                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/ReverbUGens.so
+7f6375c79000-7f6375c7a000 r--p 00005000 08:04 9835656                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/ReverbUGens.so
+7f6375c7a000-7f6375c7b000 rw-p 00006000 08:04 9835656                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/ReverbUGens.so
+7f6375c7b000-7f6375c82000 r-xp 00000000 08:04 9835483                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BetablockerUGens.so
+7f6375c82000-7f6375e81000 ---p 00007000 08:04 9835483                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BetablockerUGens.so
+7f6375e81000-7f6375e82000 r--p 00006000 08:04 9835483                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BetablockerUGens.so
+7f6375e82000-7f6375e83000 rw-p 00007000 08:04 9835483                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BetablockerUGens.so
+7f6375e83000-7f6375e94000 r-xp 00000000 08:04 9835652                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/OscUGens.so
+7f6375e94000-7f6376093000 ---p 00011000 08:04 9835652                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/OscUGens.so
+7f6376093000-7f6376094000 r--p 00010000 08:04 9835652                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/OscUGens.so
+7f6376094000-7f6376095000 rw-p 00011000 08:04 9835652                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/OscUGens.so
+7f6376095000-7f63760cf000 r-xp 00000000 08:04 9835494                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/JoshGrainUGens.so
+7f63760cf000-7f63762ce000 ---p 0003a000 08:04 9835494                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/JoshGrainUGens.so
+7f63762ce000-7f63762cf000 r--p 00039000 08:04 9835494                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/JoshGrainUGens.so
+7f63762cf000-7f63762d0000 rw-p 0003a000 08:04 9835494                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/JoshGrainUGens.so
+7f63762d0000-7f63762d6000 r-xp 00000000 08:04 9835481                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BBCut2UGens.so
+7f63762d6000-7f63764d5000 ---p 00006000 08:04 9835481                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BBCut2UGens.so
+7f63764d5000-7f63764d6000 r--p 00005000 08:04 9835481                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BBCut2UGens.so
+7f63764d6000-7f63764d8000 rw-p 00006000 08:04 9835481                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BBCut2UGens.so
+7f63764d8000-7f63764db000 r-xp 00000000 08:04 9835512                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MembraneUGens.so
+7f63764db000-7f63766da000 ---p 00003000 08:04 9835512                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MembraneUGens.so
+7f63766da000-7f63766db000 r--p 00002000 08:04 9835512                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MembraneUGens.so
+7f63766db000-7f63766dc000 rw-p 00003000 08:04 9835512                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/MembraneUGens.so
+7f63766dc000-7f63766df000 r-xp 00000000 08:04 9835639                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/DynNoiseUGens.so
+7f63766df000-7f63768de000 ---p 00003000 08:04 9835639                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/DynNoiseUGens.so
+7f63768de000-7f63768df000 r--p 00002000 08:04 9835639                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/DynNoiseUGens.so
+7f63768df000-7f63768e0000 rw-p 00003000 08:04 9835639                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/DynNoiseUGens.so
+7f63768e0000-7f63768ec000 r-xp 00000000 08:04 9835514                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/PitchDetection.so
+7f63768ec000-7f6376aeb000 ---p 0000c000 08:04 9835514                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/PitchDetection.so
+7f6376aeb000-7f6376aec000 r--p 0000b000 08:04 9835514                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/PitchDetection.so
+7f6376aec000-7f6376aed000 rw-p 0000c000 08:04 9835514                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/PitchDetection.so
+7f6376aed000-7f6376af2000 r-xp 00000000 08:04 9835487                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BhobGrain.so
+7f6376af2000-7f6376cf2000 ---p 00005000 08:04 9835487                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BhobGrain.so
+7f6376cf2000-7f6376cf3000 r--p 00005000 08:04 9835487                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BhobGrain.so
+7f6376cf3000-7f6376cf4000 rw-p 00006000 08:04 9835487                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/BhobGrain.so
+7f6376cf4000-7f6376cf7000 ---p 00000000 00:00 0 
+7f6376cf7000-7f6376df5000 rw-p 00000000 00:00 0 
+7f6376df5000-7f6376dfe000 r-xp 00000000 08:04 37490409                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f6376dfe000-7f6376ffd000 ---p 00009000 08:04 37490409                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f6376ffd000-7f6376ffe000 r--p 00008000 08:04 37490409                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f6376ffe000-7f6376fff000 rw-p 00009000 08:04 37490409                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f6376fff000-7f6377016000 r-xp 00000000 08:04 51249672                   /lib/x86_64-linux-gnu/libresolv-2.23.so
+7f6377016000-7f6377216000 ---p 00017000 08:04 51249672                   /lib/x86_64-linux-gnu/libresolv-2.23.so
+7f6377216000-7f6377217000 r--p 00017000 08:04 51249672                   /lib/x86_64-linux-gnu/libresolv-2.23.so
+7f6377217000-7f6377218000 rw-p 00018000 08:04 51249672                   /lib/x86_64-linux-gnu/libresolv-2.23.so
+7f6377218000-7f637721a000 rw-p 00000000 00:00 0 
+7f637721a000-7f637721f000 r-xp 00000000 08:04 30943286                   /usr/lib/x86_64-linux-gnu/libasyncns.so.0.3.1
+7f637721f000-7f637741e000 ---p 00005000 08:04 30943286                   /usr/lib/x86_64-linux-gnu/libasyncns.so.0.3.1
+7f637741e000-7f637741f000 r--p 00004000 08:04 30943286                   /usr/lib/x86_64-linux-gnu/libasyncns.so.0.3.1
+7f637741f000-7f6377420000 rw-p 00005000 08:04 30943286                   /usr/lib/x86_64-linux-gnu/libasyncns.so.0.3.1
+7f6377420000-7f6377428000 r-xp 00000000 08:04 51254790                   /lib/x86_64-linux-gnu/libwrap.so.0.7.6
+7f6377428000-7f6377627000 ---p 00008000 08:04 51254790                   /lib/x86_64-linux-gnu/libwrap.so.0.7.6
+7f6377627000-7f6377628000 r--p 00007000 08:04 51254790                   /lib/x86_64-linux-gnu/libwrap.so.0.7.6
+7f6377628000-7f6377629000 rw-p 00008000 08:04 51254790                   /lib/x86_64-linux-gnu/libwrap.so.0.7.6
+7f6377629000-7f637762a000 rw-p 00000000 00:00 0 
+7f637762a000-7f63776a4000 r-xp 00000000 08:04 31195489                   /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-8.0.so
+7f63776a4000-7f63778a3000 ---p 0007a000 08:04 31195489                   /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-8.0.so
+7f63778a3000-7f63778a4000 r--p 00079000 08:04 31195489                   /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-8.0.so
+7f63778a4000-7f63778a5000 rw-p 0007a000 08:04 31195489                   /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-8.0.so
+7f63778a5000-7f63778af000 r-xp 00000000 08:04 51254663                   /lib/x86_64-linux-gnu/libjson-c.so.2.0.0
+7f63778af000-7f6377aae000 ---p 0000a000 08:04 51254663                   /lib/x86_64-linux-gnu/libjson-c.so.2.0.0
+7f6377aae000-7f6377aaf000 r--p 00009000 08:04 51254663                   /lib/x86_64-linux-gnu/libjson-c.so.2.0.0
+7f6377aaf000-7f6377ab0000 rw-p 0000a000 08:04 51254663                   /lib/x86_64-linux-gnu/libjson-c.so.2.0.0
+7f6377ab0000-7f6377afe000 r-xp 00000000 08:04 30933937                   /usr/lib/x86_64-linux-gnu/libpulse.so.0.19.0
+7f6377afe000-7f6377cfe000 ---p 0004e000 08:04 30933937                   /usr/lib/x86_64-linux-gnu/libpulse.so.0.19.0
+7f6377cfe000-7f6377cff000 r--p 0004e000 08:04 30933937                   /usr/lib/x86_64-linux-gnu/libpulse.so.0.19.0
+7f6377cff000-7f6377d00000 rw-p 0004f000 08:04 30933937                   /usr/lib/x86_64-linux-gnu/libpulse.so.0.19.0
+7f6377d00000-7f6377df9000 r-xp 00000000 08:04 30943276                   /usr/lib/x86_64-linux-gnu/libasound.so.2.0.0
+7f6377df9000-7f6377ff8000 ---p 000f9000 08:04 30943276                   /usr/lib/x86_64-linux-gnu/libasound.so.2.0.0
+7f6377ff8000-7f6377fff000 r--p 000f8000 08:04 30943276                   /usr/lib/x86_64-linux-gnu/libasound.so.2.0.0
+7f6377fff000-7f6378000000 rw-p 000ff000 08:04 30943276                   /usr/lib/x86_64-linux-gnu/libasound.so.2.0.0
+7f6378000000-7f6378021000 rw-p 00000000 00:00 0 
+7f6378021000-7f637c000000 ---p 00000000 00:00 0 
+7f637c000000-7f637c021000 rw-p 00000000 00:00 0 
+7f637c021000-7f6380000000 ---p 00000000 00:00 0 
+7f6380000000-7f6380021000 rw-p 00000000 00:00 0 
+7f6380021000-7f6384000000 ---p 00000000 00:00 0 
+7f6384000000-7f6384021000 rw-p 00000000 00:00 0 
+7f6384021000-7f6388000000 ---p 00000000 00:00 0 
+7f6388000000-7f6388021000 rw-p 00000000 00:00 0 
+7f6388021000-7f638c000000 ---p 00000000 00:00 0 
+7f638c000000-7f638c021000 rw-p 00000000 00:00 0 
+7f638c021000-7f6390000000 ---p 00000000 00:00 0 
+7f6390000000-7f6390021000 rw-p 00000000 00:00 0 
+7f6390021000-7f6394000000 ---p 00000000 00:00 0 
+7f6394000000-7f6394021000 rw-p 00000000 00:00 0 
+7f6394021000-7f6398000000 ---p 00000000 00:00 0 
+7f6398000000-7f6398021000 rw-p 00000000 00:00 0 
+7f6398021000-7f639c000000 ---p 00000000 00:00 0 
+7f639c000000-7f639c021000 rw-p 00000000 00:00 0 
+7f639c021000-7f63a0000000 ---p 00000000 00:00 0 
+7f63a0000000-7f63a0021000 rw-p 00000000 00:00 0 
+7f63a0021000-7f63a4000000 ---p 00000000 00:00 0 
+7f63a4000000-7f63a4021000 rw-p 00000000 00:00 0 
+7f63a4021000-7f63a8000000 ---p 00000000 00:00 0 
+7f63a8000000-7f63a8021000 rw-p 00000000 00:00 0 
+7f63a8021000-7f63ac000000 ---p 00000000 00:00 0 
+7f63ac000000-7f63ac021000 rw-p 00000000 00:00 0 
+7f63ac021000-7f63b0000000 ---p 00000000 00:00 0 
+7f63b0000000-7f63b0021000 rw-p 00000000 00:00 0 
+7f63b0021000-7f63b4000000 ---p 00000000 00:00 0 
+7f63b4000000-7f63b4021000 rw-p 00000000 00:00 0 
+7f63b4021000-7f63b8000000 ---p 00000000 00:00 0 
+7f63b8000000-7f63b8021000 rw-p 00000000 00:00 0 
+7f63b8021000-7f63bc000000 ---p 00000000 00:00 0 
+7f63bc000000-7f63bc021000 rw-p 00000000 00:00 0 
+7f63bc021000-7f63c0000000 ---p 00000000 00:00 0 
+7f63c0000000-7f63c0021000 rw-p 00000000 00:00 0 
+7f63c0021000-7f63c4000000 ---p 00000000 00:00 0 
+7f63c4000000-7f63c4021000 rw-p 00000000 00:00 0 
+7f63c4021000-7f63c8000000 ---p 00000000 00:00 0 
+7f63c8092000-7f63c81c8000 rw-p 00000000 00:00 0 
+7f63c81c8000-7f63c8292000 ---p 00000000 00:00 0 
+7f63c8292000-7f63c82a1000 r-xp 00000000 08:04 37490375                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjsoundalsa.so
+7f63c82a1000-7f63c84a0000 ---p 0000f000 08:04 37490375                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjsoundalsa.so
+7f63c84a0000-7f63c84a1000 r--p 0000e000 08:04 37490375                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjsoundalsa.so
+7f63c84a1000-7f63c84a2000 rw-p 0000f000 08:04 37490375                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjsoundalsa.so
+7f63c84a2000-7f63c84a3000 r-xp 00000000 08:04 37490399                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjsound.so
+7f63c84a3000-7f63c86a2000 ---p 00001000 08:04 37490399                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjsound.so
+7f63c86a2000-7f63c86a3000 r--p 00000000 08:04 37490399                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjsound.so
+7f63c86a3000-7f63c86a4000 rw-p 00001000 08:04 37490399                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjsound.so
+7f63c86a4000-7f63c88a4000 rw-p 00000000 00:00 0 
+7f63c88a4000-7f63c8aa4000 rw-p 00000000 00:00 0 
+7f63c8aa4000-7f63c8aa7000 ---p 00000000 00:00 0 
+7f63c8aa7000-7f63c8da5000 rw-p 00000000 00:00 0 
+7f63c8da5000-7f63c8da8000 ---p 00000000 00:00 0 
+7f63c8da8000-7f63c8ea6000 rw-p 00000000 00:00 0 
+7f63c8ea6000-7f63c8ea9000 ---p 00000000 00:00 0 
+7f63c8ea9000-7f63c8fa7000 rw-p 00000000 00:00 0 
+7f63c8fa7000-7f63c8faa000 ---p 00000000 00:00 0 
+7f63c8faa000-7f63c90a8000 rw-p 00000000 00:00 0 
+7f63c90a8000-7f63c90ab000 ---p 00000000 00:00 0 
+7f63c90ab000-7f63c91a9000 rw-p 00000000 00:00 0 
+7f63c91a9000-7f63c91ac000 ---p 00000000 00:00 0 
+7f63c91ac000-7f63c92aa000 rw-p 00000000 00:00 0 
+7f63c92aa000-7f63c92ad000 ---p 00000000 00:00 0 
+7f63c92ad000-7f63c93ab000 rw-p 00000000 00:00 0 
+7f63c93ab000-7f63c93ae000 ---p 00000000 00:00 0 
+7f63c93ae000-7f63c94ac000 rw-p 00000000 00:00 0 
+7f63c94ac000-7f63c94af000 ---p 00000000 00:00 0 
+7f63c94af000-7f63c95ad000 rw-p 00000000 00:00 0 
+7f63c95ad000-7f63c95b0000 ---p 00000000 00:00 0 
+7f63c95b0000-7f63c98ae000 rw-p 00000000 00:00 0 
+7f63c98ae000-7f63c98b1000 ---p 00000000 00:00 0 
+7f63c98b1000-7f63c99af000 rw-p 00000000 00:00 0 
+7f63c99af000-7f63c99b2000 ---p 00000000 00:00 0 
+7f63c99b2000-7f63c9ab0000 rw-p 00000000 00:00 0 
+7f63c9ab0000-7f63c9ab3000 ---p 00000000 00:00 0 
+7f63c9ab3000-7f63c9db1000 rw-p 00000000 00:00 0 
+7f63c9db1000-7f63c9db4000 ---p 00000000 00:00 0 
+7f63c9db4000-7f63c9eb2000 rw-p 00000000 00:00 0 
+7f63c9eb2000-7f63c9eb5000 ---p 00000000 00:00 0 
+7f63c9eb5000-7f63c9fb3000 rw-p 00000000 00:00 0 
+7f63c9fb3000-7f63c9fb6000 ---p 00000000 00:00 0 
+7f63c9fb6000-7f63ca0b4000 rw-p 00000000 00:00 0 
+7f63ca0b4000-7f63ca0b7000 ---p 00000000 00:00 0 
+7f63ca0b7000-7f63ca3b5000 rw-p 00000000 00:00 0 
+7f63ca3b5000-7f63ca3b8000 ---p 00000000 00:00 0 
+7f63ca3b8000-7f63ca6b6000 rw-p 00000000 00:00 0 
+7f63ca6b6000-7f63ca6b9000 ---p 00000000 00:00 0 
+7f63ca6b9000-7f63ca7b7000 rw-p 00000000 00:00 0 
+7f63ca7b7000-7f63ca7ba000 ---p 00000000 00:00 0 
+7f63ca7ba000-7f63ca8b8000 rw-p 00000000 00:00 0 
+7f63ca8b8000-7f63ca8ca000 r-xp 00000000 08:04 51254648                   /lib/x86_64-linux-gnu/libgpg-error.so.0.17.0
+7f63ca8ca000-7f63caaca000 ---p 00012000 08:04 51254648                   /lib/x86_64-linux-gnu/libgpg-error.so.0.17.0
+7f63caaca000-7f63caacb000 r--p 00012000 08:04 51254648                   /lib/x86_64-linux-gnu/libgpg-error.so.0.17.0
+7f63caacb000-7f63caacc000 rw-p 00013000 08:04 51254648                   /lib/x86_64-linux-gnu/libgpg-error.so.0.17.0
+7f63caacc000-7f63cab3a000 r-xp 00000000 08:04 51254733                   /lib/x86_64-linux-gnu/libpcre.so.3.13.2
+7f63cab3a000-7f63cad3a000 ---p 0006e000 08:04 51254733                   /lib/x86_64-linux-gnu/libpcre.so.3.13.2
+7f63cad3a000-7f63cad3b000 r--p 0006e000 08:04 51254733                   /lib/x86_64-linux-gnu/libpcre.so.3.13.2
+7f63cad3b000-7f63cad3c000 rw-p 0006f000 08:04 51254733                   /lib/x86_64-linux-gnu/libpcre.so.3.13.2
+7f63cad3c000-7f63cae14000 r-xp 00000000 08:04 51254515                   /lib/x86_64-linux-gnu/libgcrypt.so.20.0.5
+7f63cae14000-7f63cb013000 ---p 000d8000 08:04 51254515                   /lib/x86_64-linux-gnu/libgcrypt.so.20.0.5
+7f63cb013000-7f63cb014000 r--p 000d7000 08:04 51254515                   /lib/x86_64-linux-gnu/libgcrypt.so.20.0.5
+7f63cb014000-7f63cb01c000 rw-p 000d8000 08:04 51254515                   /lib/x86_64-linux-gnu/libgcrypt.so.20.0.5
+7f63cb01c000-7f63cb01d000 rw-p 00000000 00:00 0 
+7f63cb01d000-7f63cb03e000 r-xp 00000000 08:04 51254671                   /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7f63cb03e000-7f63cb23d000 ---p 00021000 08:04 51254671                   /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7f63cb23d000-7f63cb23e000 r--p 00020000 08:04 51254671                   /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7f63cb23e000-7f63cb23f000 rw-p 00021000 08:04 51254671                   /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7f63cb23f000-7f63cb25e000 r-xp 00000000 08:04 51254762                   /lib/x86_64-linux-gnu/libselinux.so.1
+7f63cb25e000-7f63cb45d000 ---p 0001f000 08:04 51254762                   /lib/x86_64-linux-gnu/libselinux.so.1
+7f63cb45d000-7f63cb45e000 r--p 0001e000 08:04 51254762                   /lib/x86_64-linux-gnu/libselinux.so.1
+7f63cb45e000-7f63cb45f000 rw-p 0001f000 08:04 51254762                   /lib/x86_64-linux-gnu/libselinux.so.1
+7f63cb45f000-7f63cb461000 rw-p 00000000 00:00 0 
+7f63cb461000-7f63cb48b000 r-xp 00000000 08:04 30944575                   /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.8
+7f63cb48b000-7f63cb68b000 ---p 0002a000 08:04 30944575                   /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.8
+7f63cb68b000-7f63cb68c000 r--p 0002a000 08:04 30944575                   /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.8
+7f63cb68c000-7f63cb68d000 rw-p 0002b000 08:04 30944575                   /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.8
+7f63cb68d000-7f63cb694000 r-xp 00000000 08:04 30944116                   /usr/lib/x86_64-linux-gnu/libogg.so.0.8.2
+7f63cb694000-7f63cb894000 ---p 00007000 08:04 30944116                   /usr/lib/x86_64-linux-gnu/libogg.so.0.8.2
+7f63cb894000-7f63cb895000 r--p 00007000 08:04 30944116                   /usr/lib/x86_64-linux-gnu/libogg.so.0.8.2
+7f63cb895000-7f63cb896000 rw-p 00008000 08:04 30944116                   /usr/lib/x86_64-linux-gnu/libogg.so.0.8.2
+7f63cb896000-7f63cb923000 r-xp 00000000 08:04 30944577                   /usr/lib/x86_64-linux-gnu/libvorbisenc.so.2.0.11
+7f63cb923000-7f63cbb22000 ---p 0008d000 08:04 30944577                   /usr/lib/x86_64-linux-gnu/libvorbisenc.so.2.0.11
+7f63cbb22000-7f63cbb3e000 r--p 0008c000 08:04 30944577                   /usr/lib/x86_64-linux-gnu/libvorbisenc.so.2.0.11
+7f63cbb3e000-7f63cbb3f000 rw-p 000a8000 08:04 30944577                   /usr/lib/x86_64-linux-gnu/libvorbisenc.so.2.0.11
+7f63cbb3f000-7f63cbbb2000 r-xp 00000000 08:04 30943030                   /usr/lib/x86_64-linux-gnu/libFLAC.so.8.3.0
+7f63cbbb2000-7f63cbdb2000 ---p 00073000 08:04 30943030                   /usr/lib/x86_64-linux-gnu/libFLAC.so.8.3.0
+7f63cbdb2000-7f63cbdb3000 r--p 00073000 08:04 30943030                   /usr/lib/x86_64-linux-gnu/libFLAC.so.8.3.0
+7f63cbdb3000-7f63cbdb4000 rw-p 00074000 08:04 30943030                   /usr/lib/x86_64-linux-gnu/libFLAC.so.8.3.0
+7f63cbdb4000-7f63cbdfe000 r-xp 00000000 08:04 51249166                   /lib/x86_64-linux-gnu/libdbus-1.so.3.14.6
+7f63cbdfe000-7f63cbffe000 ---p 0004a000 08:04 51249166                   /lib/x86_64-linux-gnu/libdbus-1.so.3.14.6
+7f63cbffe000-7f63cbfff000 r--p 0004a000 08:04 51249166                   /lib/x86_64-linux-gnu/libdbus-1.so.3.14.6
+7f63cbfff000-7f63cc000000 rw-p 0004b000 08:04 51249166                   /lib/x86_64-linux-gnu/libdbus-1.so.3.14.6
+7f63cc000000-7f63cca1a000 rw-p 00000000 00:00 0 
+7f63cca1a000-7f63d0000000 ---p 00000000 00:00 0 
+7f63d0000000-7f63d0021000 rw-p 00000000 00:00 0 
+7f63d0021000-7f63d4000000 ---p 00000000 00:00 0 
+7f63d4000000-7f63d4021000 rw-p 00000000 00:00 0 
+7f63d4021000-7f63d8000000 ---p 00000000 00:00 0 
+7f63d8000000-7f63d8021000 rw-p 00000000 00:00 0 
+7f63d8021000-7f63dc000000 ---p 00000000 00:00 0 
+7f63dc000000-7f63dc03c000 rw-p 00000000 00:00 0 
+7f63dc03c000-7f63e0000000 ---p 00000000 00:00 0 
+7f63e0000000-7f63e0021000 rw-p 00000000 00:00 0 
+7f63e0021000-7f63e4000000 ---p 00000000 00:00 0 
+7f63e4000000-7f63e4021000 rw-p 00000000 00:00 0 
+7f63e4021000-7f63e8000000 ---p 00000000 00:00 0 
+7f63e8000000-7f63e8065000 rw-p 00000000 00:00 0 
+7f63e8065000-7f63ec000000 ---p 00000000 00:00 0 
+7f63ec000000-7f63ec481000 rw-p 00000000 00:00 0 
+7f63ec481000-7f63f0000000 ---p 00000000 00:00 0 
+7f63f0000000-7f63f0021000 rw-p 00000000 00:00 0 
+7f63f0021000-7f63f4000000 ---p 00000000 00:00 0 
+7f63f4000000-7f63f4021000 rw-p 00000000 00:00 0 
+7f63f4021000-7f63f8000000 ---p 00000000 00:00 0 
+7f63f8000000-7f63f8021000 rw-p 00000000 00:00 0 
+7f63f8021000-7f63fc000000 ---p 00000000 00:00 0 
+7f63fc000000-7f63fc021000 rw-p 00000000 00:00 0 
+7f63fc021000-7f6400000000 ---p 00000000 00:00 0 
+7f6400000000-7f6400036000 rw-p 00000000 00:00 0 
+7f6400036000-7f6404000000 ---p 00000000 00:00 0 
+7f6404000000-7f6404021000 rw-p 00000000 00:00 0 
+7f6404021000-7f6408000000 ---p 00000000 00:00 0 
+7f6408000000-7f6408021000 rw-p 00000000 00:00 0 
+7f6408021000-7f640c000000 ---p 00000000 00:00 0 
+7f640c000000-7f640c03a000 rw-p 00000000 00:00 0 
+7f640c03a000-7f6410000000 ---p 00000000 00:00 0 
+7f6410012000-7f6410013000 ---p 00000000 00:00 0 
+7f6410013000-7f6410093000 rw-p 00000000 00:00 0 
+7f6410093000-7f6410113000 r-xp 00000000 08:04 51249457                   /lib/x86_64-linux-gnu/libsystemd.so.0.14.0
+7f6410113000-7f6410116000 r--p 0007f000 08:04 51249457                   /lib/x86_64-linux-gnu/libsystemd.so.0.14.0
+7f6410116000-7f6410117000 rw-p 00082000 08:04 51249457                   /lib/x86_64-linux-gnu/libsystemd.so.0.14.0
+7f6410117000-7f6410118000 rw-p 00000000 00:00 0 
+7f6410118000-7f641030f000 r-xp 00000000 08:04 30943584                   /usr/lib/x86_64-linux-gnu/libfftw3f.so.3.4.4
+7f641030f000-7f641050e000 ---p 001f7000 08:04 30943584                   /usr/lib/x86_64-linux-gnu/libfftw3f.so.3.4.4
+7f641050e000-7f6410522000 r--p 001f6000 08:04 30943584                   /usr/lib/x86_64-linux-gnu/libfftw3f.so.3.4.4
+7f6410522000-7f6410523000 rw-p 0020a000 08:04 30943584                   /usr/lib/x86_64-linux-gnu/libfftw3f.so.3.4.4
+7f6410523000-7f6410569000 r-xp 00000000 08:04 30943920                   /usr/lib/x86_64-linux-gnu/libjack.so.0.1.0
+7f6410569000-7f6410769000 ---p 00046000 08:04 30943920                   /usr/lib/x86_64-linux-gnu/libjack.so.0.1.0
+7f6410769000-7f641076b000 r--p 00046000 08:04 30943920                   /usr/lib/x86_64-linux-gnu/libjack.so.0.1.0
+7f641076b000-7f641076c000 rw-p 00048000 08:04 30943920                   /usr/lib/x86_64-linux-gnu/libjack.so.0.1.0
+7f641076c000-7f64107ce000 r-xp 00000000 08:04 30944413                   /usr/lib/x86_64-linux-gnu/libsndfile.so.1.0.25
+7f64107ce000-7f64109ce000 ---p 00062000 08:04 30944413                   /usr/lib/x86_64-linux-gnu/libsndfile.so.1.0.25
+7f64109ce000-7f64109d0000 r--p 00062000 08:04 30944413                   /usr/lib/x86_64-linux-gnu/libsndfile.so.1.0.25
+7f64109d0000-7f64109d1000 rw-p 00064000 08:04 30944413                   /usr/lib/x86_64-linux-gnu/libsndfile.so.1.0.25
+7f64109d1000-7f64109d5000 rw-p 00000000 00:00 0 
+7f64109d5000-7f64109e5000 r-xp 00000000 08:04 30943300                   /usr/lib/x86_64-linux-gnu/libavahi-client.so.3.2.9
+7f64109e5000-7f6410be4000 ---p 00010000 08:04 30943300                   /usr/lib/x86_64-linux-gnu/libavahi-client.so.3.2.9
+7f6410be4000-7f6410be5000 r--p 0000f000 08:04 30943300                   /usr/lib/x86_64-linux-gnu/libavahi-client.so.3.2.9
+7f6410be5000-7f6410be6000 rw-p 00010000 08:04 30943300                   /usr/lib/x86_64-linux-gnu/libavahi-client.so.3.2.9
+7f6410be6000-7f6410bf1000 r-xp 00000000 08:04 30943302                   /usr/lib/x86_64-linux-gnu/libavahi-common.so.3.5.3
+7f6410bf1000-7f6410df0000 ---p 0000b000 08:04 30943302                   /usr/lib/x86_64-linux-gnu/libavahi-common.so.3.5.3
+7f6410df0000-7f6410df1000 r--p 0000a000 08:04 30943302                   /usr/lib/x86_64-linux-gnu/libavahi-common.so.3.5.3
+7f6410df1000-7f6410df2000 rw-p 0000b000 08:04 30943302                   /usr/lib/x86_64-linux-gnu/libavahi-common.so.3.5.3
+7f6410df2000-7f6410e54000 r-xp 00000000 08:04 9835647                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/libscsynth.so
+7f6410e54000-7f6411054000 ---p 00062000 08:04 9835647                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/libscsynth.so
+7f6411054000-7f6411056000 r--p 00062000 08:04 9835647                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/libscsynth.so
+7f6411056000-7f6411058000 rw-p 00064000 08:04 9835647                    /home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64/libscsynth.so
+7f6411058000-7f6411078000 rw-p 00000000 00:00 0 
+7f6411078000-7f641108f000 r-xp 00000000 08:04 15729265                   /tmp/jna/jna4395611408073738975.tmp (deleted)
+7f641108f000-7f641128e000 ---p 00017000 08:04 15729265                   /tmp/jna/jna4395611408073738975.tmp (deleted)
+7f641128e000-7f641128f000 r--p 00016000 08:04 15729265                   /tmp/jna/jna4395611408073738975.tmp (deleted)
+7f641128f000-7f6411290000 rw-p 00017000 08:04 15729265                   /tmp/jna/jna4395611408073738975.tmp (deleted)
+7f6411290000-7f6411490000 rw-p 00000000 00:00 0 
+7f6411490000-7f64114a1000 r-xp 00000000 08:04 37490402                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f64114a1000-7f64116a1000 ---p 00011000 08:04 37490402                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f64116a1000-7f64116a2000 r--p 00011000 08:04 37490402                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f64116a2000-7f64116a3000 rw-p 00012000 08:04 37490402                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f64116a3000-7f64118a3000 rw-p 00000000 00:00 0 
+7f64118a3000-7f64118a6000 ---p 00000000 00:00 0 
+7f64118a6000-7f6411ba4000 rw-p 00000000 00:00 0 
+7f6411ba4000-7f6411ba9000 r-xp 00000000 08:04 30943197                   /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f6411ba9000-7f6411da8000 ---p 00005000 08:04 30943197                   /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f6411da8000-7f6411da9000 r--p 00004000 08:04 30943197                   /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f6411da9000-7f6411daa000 rw-p 00005000 08:04 30943197                   /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f6411daa000-7f6411db3000 r-xp 00000000 08:04 30943189                   /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f6411db3000-7f6411fb2000 ---p 00009000 08:04 30943189                   /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f6411fb2000-7f6411fb3000 r--p 00008000 08:04 30943189                   /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f6411fb3000-7f6411fb4000 rw-p 00009000 08:04 30943189                   /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f6411fb4000-7f6411fb7000 ---p 00000000 00:00 0 
+7f6411fb7000-7f64120b5000 rw-p 00000000 00:00 0 
+7f64120b5000-7f64120d9000 r-xp 00000000 08:04 51254745                   /lib/x86_64-linux-gnu/libpng12.so.0.54.0
+7f64120d9000-7f64122d8000 ---p 00024000 08:04 51254745                   /lib/x86_64-linux-gnu/libpng12.so.0.54.0
+7f64122d8000-7f64122d9000 r--p 00023000 08:04 51254745                   /lib/x86_64-linux-gnu/libpng12.so.0.54.0
+7f64122d9000-7f64122da000 rw-p 00024000 08:04 51254745                   /lib/x86_64-linux-gnu/libpng12.so.0.54.0
+7f64122da000-7f641237e000 r-xp 00000000 08:04 30943624                   /usr/lib/x86_64-linux-gnu/libfreetype.so.6.12.1
+7f641237e000-7f641257d000 ---p 000a4000 08:04 30943624                   /usr/lib/x86_64-linux-gnu/libfreetype.so.6.12.1
+7f641257d000-7f6412583000 r--p 000a3000 08:04 30943624                   /usr/lib/x86_64-linux-gnu/libfreetype.so.6.12.1
+7f6412583000-7f6412584000 rw-p 000a9000 08:04 30943624                   /usr/lib/x86_64-linux-gnu/libfreetype.so.6.12.1
+7f6412584000-7f64125d6000 r-xp 00000000 08:04 37490398                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libfontmanager.so
+7f64125d6000-7f64127d6000 ---p 00052000 08:04 37490398                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libfontmanager.so
+7f64127d6000-7f64127d8000 r--p 00052000 08:04 37490398                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libfontmanager.so
+7f64127d8000-7f64127d9000 rw-p 00054000 08:04 37490398                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libfontmanager.so
+7f64127d9000-7f64127de000 r-xp 00000000 08:04 30943193                   /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f64127de000-7f64129dd000 ---p 00005000 08:04 30943193                   /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f64129dd000-7f64129de000 r--p 00004000 08:04 30943193                   /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f64129de000-7f64129df000 rw-p 00005000 08:04 30943193                   /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f64129df000-7f64129e1000 r-xp 00000000 08:04 30943182                   /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f64129e1000-7f6412be1000 ---p 00002000 08:04 30943182                   /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f6412be1000-7f6412be2000 r--p 00002000 08:04 30943182                   /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f6412be2000-7f6412be3000 rw-p 00003000 08:04 30943182                   /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f6412be3000-7f6412c04000 r-xp 00000000 08:04 30944699                   /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f6412c04000-7f6412e03000 ---p 00021000 08:04 30944699                   /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f6412e03000-7f6412e04000 r--p 00020000 08:04 30944699                   /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f6412e04000-7f6412e05000 rw-p 00021000 08:04 30944699                   /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f6412e05000-7f6412e14000 r-xp 00000000 08:04 30943203                   /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f6412e14000-7f6413013000 ---p 0000f000 08:04 30943203                   /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f6413013000-7f6413014000 r--p 0000e000 08:04 30943203                   /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f6413014000-7f6413015000 rw-p 0000f000 08:04 30943203                   /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f6413015000-7f641301a000 r-xp 00000000 08:04 30943222                   /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f641301a000-7f6413219000 ---p 00005000 08:04 30943222                   /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f6413219000-7f641321a000 r--p 00004000 08:04 30943222                   /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f641321a000-7f641321b000 rw-p 00005000 08:04 30943222                   /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f641321b000-7f6413350000 r-xp 00000000 08:04 30943178                   /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f6413350000-7f6413550000 ---p 00135000 08:04 30943178                   /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f6413550000-7f6413551000 r--p 00135000 08:04 30943178                   /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f6413551000-7f6413555000 rw-p 00136000 08:04 30943178                   /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f6413555000-7f6413566000 r-xp 00000000 08:04 30943195                   /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f6413566000-7f6413765000 ---p 00011000 08:04 30943195                   /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f6413765000-7f6413766000 r--p 00010000 08:04 30943195                   /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f6413766000-7f6413767000 rw-p 00011000 08:04 30943195                   /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f6413767000-7f64137bb000 r-xp 00000000 08:04 37490410                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libawt_xawt.so
+7f64137bb000-7f64139bb000 ---p 00054000 08:04 37490410                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libawt_xawt.so
+7f64139bb000-7f64139bc000 r--p 00054000 08:04 37490410                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libawt_xawt.so
+7f64139bc000-7f64139bf000 rw-p 00055000 08:04 37490410                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libawt_xawt.so
+7f64139bf000-7f6418000000 rw-p 00000000 00:00 0 
+7f6418000000-7f6418021000 rw-p 00000000 00:00 0 
+7f6418021000-7f641c000000 ---p 00000000 00:00 0 
+7f641c006000-7f641c00f000 r-xp 00000000 08:04 30943216                   /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f641c00f000-7f641c20e000 ---p 00009000 08:04 30943216                   /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f641c20e000-7f641c20f000 r--p 00008000 08:04 30943216                   /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f641c20f000-7f641c210000 rw-p 00009000 08:04 30943216                   /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f641c234000-7f641c434000 rw-p 00000000 00:00 0 
+7f641c434000-7f641c4d4000 r-xp 00000000 08:04 37490415                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libawt.so
+7f641c4d4000-7f641c6d4000 ---p 000a0000 08:04 37490415                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libawt.so
+7f641c6d4000-7f641c6d5000 r--p 000a0000 08:04 37490415                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libawt.so
+7f641c6d5000-7f641c6e0000 rw-p 000a1000 08:04 37490415                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libawt.so
+7f641c6e0000-7f641c705000 rw-p 00000000 00:00 0 
+7f641c705000-7f641c708000 ---p 00000000 00:00 0 
+7f641c708000-7f641c806000 rw-p 00000000 00:00 0 
+7f641c806000-7f641c809000 ---p 00000000 00:00 0 
+7f641c809000-7f641c907000 rw-p 00000000 00:00 0 
+7f641c907000-7f641c90a000 ---p 00000000 00:00 0 
+7f641c90a000-7f641ca08000 rw-p 00000000 00:00 0 
+7f641ca08000-7f641ca0b000 ---p 00000000 00:00 0 
+7f641ca0b000-7f641cb09000 rw-p 00000000 00:00 0 
+7f641cb09000-7f641cb20000 r-xp 00000000 08:04 37490394                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f641cb20000-7f641cd1f000 ---p 00017000 08:04 37490394                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f641cd1f000-7f641cd20000 r--p 00016000 08:04 37490394                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f641cd20000-7f641cd21000 rw-p 00017000 08:04 37490394                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f641cd21000-7f641cf21000 rw-p 00000000 00:00 0 
+7f641cf21000-7f641cf9a000 r--s 010fd000 08:04 37227483                   /usr/lib/jvm/java-8-openjdk-amd64/lib/tools.jar
+7f641cf9a000-7f641d19a000 rw-p 00000000 00:00 0 
+7f641d19a000-7f641d1a1000 r--s 00000000 08:04 31197730                   /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7f641d1a1000-7f641d1a2000 rwxp 00000000 00:00 0 
+7f641d1a2000-7f641d1a6000 r--s 0009a000 08:04 37490423                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar
+7f641d1a6000-7f641d1a9000 ---p 00000000 00:00 0 
+7f641d1a9000-7f641d4a7000 rw-p 00000000 00:00 0 
+7f641d4a7000-7f641d4ba000 r--s 00346000 08:04 37490418                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar
+7f641d4ba000-7f641d4bd000 ---p 00000000 00:00 0 
+7f641d4bd000-7f641d7bb000 rw-p 00000000 00:00 0 
+7f641d7bb000-7f641d9bb000 rw-p 00000000 00:00 0 
+7f641d9bb000-7f641d9bc000 r--s 00009000 08:04 1836989                    /home/paul/.m2/repository/cider/cider-nrepl/0.8.1/cider-nrepl-0.8.1.jar
+7f641d9bc000-7f641d9bd000 r--s 00005000 08:04 1967668                    /home/paul/.m2/repository/clj-native/clj-native/0.9.3/clj-native-0.9.3.jar
+7f641d9bd000-7f641d9be000 r--s 00001000 08:04 1850090                    /home/paul/.m2/repository/org/clojure/data.json/0.2.3/data.json-0.2.3.jar
+7f641d9be000-7f641d9bf000 r--s 00001000 08:04 1967694                    /home/paul/.m2/repository/overtone/midi-clj/0.5.0/midi-clj-0.5.0.jar
+7f641d9bf000-7f641d9c0000 r--s 00000000 08:04 1967669                    /home/paul/.m2/repository/clj-glob/clj-glob/1.0.0/clj-glob-1.0.0.jar
+7f641d9c0000-7f641d9c2000 r--s 00004000 08:04 1836992                    /home/paul/.m2/repository/compliment/compliment/0.2.0/compliment-0.2.0.jar
+7f641d9c2000-7f641d9c3000 r--s 00004000 08:04 1836979                    /home/paul/.m2/repository/org/clojure/tools.namespace/0.2.5/tools.namespace-0.2.5.jar
+7f641d9c3000-7f641d9c7000 r--s 0002f000 08:04 1967667                    /home/paul/.m2/repository/javax/jmdns/jmdns/3.4.1/jmdns-3.4.1.jar
+7f641d9c7000-7f641da0a000 r--s 00332000 08:04 1837035                    /home/paul/.m2/repository/org/clojure/clojure/1.8.0/clojure-1.8.0.jar
+7f641da0a000-7f641da25000 r--s 00394000 08:04 37622082                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/cldrdata.jar
+7f641da25000-7f641da40000 r--s 001d6000 08:04 37622079                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/nashorn.jar
+7f641da40000-7f641da41000 ---p 00000000 00:00 0 
+7f641da41000-7f641db41000 rw-p 00000000 00:00 0 
+7f641db41000-7f641db44000 ---p 00000000 00:00 0 
+7f641db44000-7f641dc42000 rw-p 00000000 00:00 0 
+7f641dc42000-7f641dc45000 ---p 00000000 00:00 0 
+7f641dc45000-7f641dd43000 rw-p 00000000 00:00 0 
+7f641dd43000-7f641dd46000 ---p 00000000 00:00 0 
+7f641dd46000-7f641de44000 rw-p 00000000 00:00 0 
+7f641de44000-7f641de47000 ---p 00000000 00:00 0 
+7f641de47000-7f641df45000 rw-p 00000000 00:00 0 
+7f641df45000-7f641df48000 ---p 00000000 00:00 0 
+7f641df48000-7f641e046000 rw-p 00000000 00:00 0 
+7f641e046000-7f641e049000 ---p 00000000 00:00 0 
+7f641e049000-7f641e147000 rw-p 00000000 00:00 0 
+7f641e147000-7f641e41f000 r--p 00000000 08:04 30933202                   /usr/lib/locale/locale-archive
+7f641e41f000-7f641e422000 ---p 00000000 00:00 0 
+7f641e422000-7f641e520000 rw-p 00000000 00:00 0 
+7f641e520000-7f641e523000 ---p 00000000 00:00 0 
+7f641e523000-7f641e621000 rw-p 00000000 00:00 0 
+7f641e621000-7f641e622000 ---p 00000000 00:00 0 
+7f641e622000-7f6420000000 rw-p 00000000 00:00 0 
+7f6420000000-7f6420021000 rw-p 00000000 00:00 0 
+7f6420021000-7f6424000000 ---p 00000000 00:00 0 
+7f6424000000-7f6424021000 rw-p 00000000 00:00 0 
+7f6424021000-7f6428000000 ---p 00000000 00:00 0 
+7f6428000000-7f6428021000 rw-p 00000000 00:00 0 
+7f6428021000-7f642c000000 ---p 00000000 00:00 0 
+7f642c000000-7f642c021000 rw-p 00000000 00:00 0 
+7f642c021000-7f6430000000 ---p 00000000 00:00 0 
+7f6430000000-7f6430021000 rw-p 00000000 00:00 0 
+7f6430021000-7f6434000000 ---p 00000000 00:00 0 
+7f6434000000-7f6434021000 rw-p 00000000 00:00 0 
+7f6434021000-7f6438000000 ---p 00000000 00:00 0 
+7f6438000000-7f6438021000 rw-p 00000000 00:00 0 
+7f6438021000-7f643c000000 ---p 00000000 00:00 0 
+7f643c000000-7f643c001000 r--s 00001000 08:04 1836987                    /home/paul/.m2/repository/org/clojure/tools.trace/0.7.8/tools.trace-0.7.8.jar
+7f643c001000-7f643c006000 r--s 0003d000 08:04 1967678                    /home/paul/.m2/repository/commons-net/commons-net/3.0.1/commons-net-3.0.1.jar
+7f643c006000-7f643c00a000 r--s 00b46000 08:04 1967703                    /home/paul/.m2/repository/overtone/scsynth/3.5.7.0/scsynth-3.5.7.0.jar
+7f643c00a000-7f643d000000 rw-p 00000000 00:00 0 
+7f643d000000-7f643d7c0000 rwxp 00000000 00:00 0 
+7f643d7c0000-7f644c000000 ---p 00000000 00:00 0 
+7f644c000000-7f644ce43000 rw-p 00000000 00:00 0 
+7f644ce43000-7f6450000000 ---p 00000000 00:00 0 
+7f6450000000-7f6450001000 r--s 00001000 08:04 1836991                    /home/paul/.m2/repository/cljs-tooling/cljs-tooling/0.1.3/cljs-tooling-0.1.3.jar
+7f6450001000-7f6450002000 r--s 00001000 08:04 1967700                    /home/paul/.m2/repository/overtone/libs.handlers/0.2.0/libs.handlers-0.2.0.jar
+7f6450002000-7f6450003000 r--s 00000000 08:04 1836975                    /home/paul/.m2/repository/org/clojure/java.classpath/0.2.0/java.classpath-0.2.0.jar
+7f6450003000-7f6450004000 r--s 00004000 08:04 1967686                    /home/paul/.m2/repository/overtone/osc-clj/0.9.0/osc-clj-0.9.0.jar
+7f6450004000-7f645000b000 r--s 0006e000 08:04 1837046                    /home/paul/.m2/repository/overtone/overtone/0.10.1/overtone-0.10.1.jar
+7f645000b000-7f645000f000 r--s 000f3000 08:04 1967675                    /home/paul/.m2/repository/net/java/dev/jna/jna/3.4.0/jna-3.4.0.jar
+7f645000f000-7f6450019000 r--s 00116000 08:04 37622085                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/localedata.jar
+7f6450019000-7f64501e7000 r--s 03c06000 08:04 37490427                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar
+7f64501e7000-7f645025d000 rw-p 00000000 00:00 0 
+7f645025d000-7f645025e000 ---p 00000000 00:00 0 
+7f645025e000-7f645035e000 rw-p 00000000 00:00 0 
+7f645035e000-7f645035f000 ---p 00000000 00:00 0 
+7f645035f000-7f645045f000 rw-p 00000000 00:00 0 
+7f645045f000-7f6450460000 ---p 00000000 00:00 0 
+7f6450460000-7f6450560000 rw-p 00000000 00:00 0 
+7f6450560000-7f6450561000 ---p 00000000 00:00 0 
+7f6450561000-7f6450661000 rw-p 00000000 00:00 0 
+7f6450661000-7f6450662000 ---p 00000000 00:00 0 
+7f6450662000-7f6450762000 rw-p 00000000 00:00 0 
+7f6450762000-7f6450763000 ---p 00000000 00:00 0 
+7f6450763000-7f6450863000 rw-p 00000000 00:00 0 
+7f6450863000-7f6450864000 ---p 00000000 00:00 0 
+7f6450864000-7f6450964000 rw-p 00000000 00:00 0 
+7f6450964000-7f6450965000 ---p 00000000 00:00 0 
+7f6450965000-7f6450aa3000 rw-p 00000000 00:00 0 
+7f6450aa3000-7f6450d53000 ---p 00000000 00:00 0 
+7f6450d53000-7f6450d91000 rw-p 00000000 00:00 0 
+7f6450d91000-7f6451040000 ---p 00000000 00:00 0 
+7f6451040000-7f64511b7000 rw-p 00000000 00:00 0 
+7f64511b7000-7f64511d7000 rw-p 00000000 00:00 0 
+7f64511d7000-7f6451578000 ---p 00000000 00:00 0 
+7f6451578000-7f6451580000 r-xp 00000000 08:04 37490392                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f6451580000-7f645177f000 ---p 00008000 08:04 37490392                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f645177f000-7f6451780000 r--p 00007000 08:04 37490392                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f6451780000-7f6451781000 rw-p 00008000 08:04 37490392                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f6451781000-7f645178c000 r-xp 00000000 08:04 51249671                   /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f645178c000-7f645198b000 ---p 0000b000 08:04 51249671                   /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f645198b000-7f645198c000 r--p 0000a000 08:04 51249671                   /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f645198c000-7f645198d000 rw-p 0000b000 08:04 51249671                   /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f645198d000-7f6451993000 rw-p 00000000 00:00 0 
+7f6451993000-7f645199e000 r-xp 00000000 08:04 51249638                   /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f645199e000-7f6451b9d000 ---p 0000b000 08:04 51249638                   /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f6451b9d000-7f6451b9e000 r--p 0000a000 08:04 51249638                   /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f6451b9e000-7f6451b9f000 rw-p 0000b000 08:04 51249638                   /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f6451b9f000-7f6451bb5000 r-xp 00000000 08:04 51249667                   /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f6451bb5000-7f6451db4000 ---p 00016000 08:04 51249667                   /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f6451db4000-7f6451db5000 r--p 00015000 08:04 51249667                   /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f6451db5000-7f6451db6000 rw-p 00016000 08:04 51249667                   /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f6451db6000-7f6451db8000 rw-p 00000000 00:00 0 
+7f6451db8000-7f6451dc0000 r-xp 00000000 08:04 51249668                   /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f6451dc0000-7f6451fbf000 ---p 00008000 08:04 51249668                   /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f6451fbf000-7f6451fc0000 r--p 00007000 08:04 51249668                   /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f6451fc0000-7f6451fc1000 rw-p 00008000 08:04 51249668                   /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f6451fc1000-7f6451fee000 r-xp 00000000 08:04 37490417                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f6451fee000-7f64521ed000 ---p 0002d000 08:04 37490417                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f64521ed000-7f64521ee000 r--p 0002c000 08:04 37490417                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f64521ee000-7f64521f0000 rw-p 0002d000 08:04 37490417                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f64521f0000-7f64521ff000 r-xp 00000000 08:04 37490385                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f64521ff000-7f64523fe000 ---p 0000f000 08:04 37490385                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f64523fe000-7f6452400000 r--p 0000e000 08:04 37490385                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f6452400000-7f6452401000 rw-p 00010000 08:04 37490385                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f6452401000-7f6452408000 r-xp 00000000 08:04 51249579                   /lib/x86_64-linux-gnu/librt-2.23.so
+7f6452408000-7f6452607000 ---p 00007000 08:04 51249579                   /lib/x86_64-linux-gnu/librt-2.23.so
+7f6452607000-7f6452608000 r--p 00006000 08:04 51249579                   /lib/x86_64-linux-gnu/librt-2.23.so
+7f6452608000-7f6452609000 rw-p 00007000 08:04 51249579                   /lib/x86_64-linux-gnu/librt-2.23.so
+7f6452609000-7f645261f000 r-xp 00000000 08:04 51254642                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f645261f000-7f645281e000 ---p 00016000 08:04 51254642                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f645281e000-7f645281f000 rw-p 00015000 08:04 51254642                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f645281f000-7f6452927000 r-xp 00000000 08:04 51249665                   /lib/x86_64-linux-gnu/libm-2.23.so
+7f6452927000-7f6452b26000 ---p 00108000 08:04 51249665                   /lib/x86_64-linux-gnu/libm-2.23.so
+7f6452b26000-7f6452b27000 r--p 00107000 08:04 51249665                   /lib/x86_64-linux-gnu/libm-2.23.so
+7f6452b27000-7f6452b28000 rw-p 00108000 08:04 51249665                   /lib/x86_64-linux-gnu/libm-2.23.so
+7f6452b28000-7f6452c9a000 r-xp 00000000 08:04 30933194                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f6452c9a000-7f6452e9a000 ---p 00172000 08:04 30933194                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f6452e9a000-7f6452ea4000 r--p 00172000 08:04 30933194                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f6452ea4000-7f6452ea6000 rw-p 0017c000 08:04 30933194                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f6452ea6000-7f6452eaa000 rw-p 00000000 00:00 0 
+7f6452eaa000-7f6453afa000 r-xp 00000000 08:04 37490412                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f6453afa000-7f6453cf9000 ---p 00c50000 08:04 37490412                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f6453cf9000-7f6453d8c000 r--p 00c4f000 08:04 37490412                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f6453d8c000-7f6453db5000 rw-p 00ce2000 08:04 37490412                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f6453db5000-7f6453de5000 rw-p 00000000 00:00 0 
+7f6453de5000-7f6453dfd000 r-xp 00000000 08:04 51249666                   /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f6453dfd000-7f6453ffc000 ---p 00018000 08:04 51249666                   /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f6453ffc000-7f6453ffd000 r--p 00017000 08:04 51249666                   /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f6453ffd000-7f6453ffe000 rw-p 00018000 08:04 51249666                   /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f6453ffe000-7f6454002000 rw-p 00000000 00:00 0 
+7f6454002000-7f6454005000 r-xp 00000000 08:04 51249655                   /lib/x86_64-linux-gnu/libdl-2.23.so
+7f6454005000-7f6454204000 ---p 00003000 08:04 51249655                   /lib/x86_64-linux-gnu/libdl-2.23.so
+7f6454204000-7f6454205000 r--p 00002000 08:04 51249655                   /lib/x86_64-linux-gnu/libdl-2.23.so
+7f6454205000-7f6454206000 rw-p 00003000 08:04 51249655                   /lib/x86_64-linux-gnu/libdl-2.23.so
+7f6454206000-7f645421f000 r-xp 00000000 08:04 51254795                   /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f645421f000-7f645441e000 ---p 00019000 08:04 51254795                   /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f645441e000-7f645441f000 r--p 00018000 08:04 51254795                   /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f645441f000-7f6454420000 rw-p 00019000 08:04 51254795                   /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f6454420000-7f64545df000 r-xp 00000000 08:04 51249658                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f64545df000-7f64547df000 ---p 001bf000 08:04 51249658                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f64547df000-7f64547e3000 r--p 001bf000 08:04 51249658                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f64547e3000-7f64547e5000 rw-p 001c3000 08:04 51249658                   /lib/x86_64-linux-gnu/libc-2.23.so
+7f64547e5000-7f64547e9000 rw-p 00000000 00:00 0 
+7f64547e9000-7f64547f6000 r-xp 00000000 08:04 37490407                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f64547f6000-7f64549f6000 ---p 0000d000 08:04 37490407                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f64549f6000-7f64549f7000 r--p 0000d000 08:04 37490407                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f64549f7000-7f64549f8000 rw-p 0000e000 08:04 37490407                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f64549f8000-7f6454a1e000 r-xp 00000000 08:04 51249179                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f6454a1e000-7f6454a20000 r--s 00000000 08:04 1967689                    /home/paul/.m2/repository/overtone/byte-spec/0.3.1/byte-spec-0.3.1.jar
+7f6454a20000-7f6454a21000 r--s 00002000 08:04 1837039                    /home/paul/.m2/repository/clojure-complete/clojure-complete/0.2.4/clojure-complete-0.2.4.jar
+7f6454a21000-7f6454af1000 rw-p 00000000 00:00 0 
+7f6454af1000-7f6454af4000 ---p 00000000 00:00 0 
+7f6454af4000-7f6454bf7000 rw-p 00000000 00:00 0 
+7f6454bf7000-7f6454bf8000 r--s 00009000 08:04 1837034                    /home/paul/.m2/repository/org/clojure/tools.nrepl/0.2.12/tools.nrepl-0.2.12.jar
+7f6454bf8000-7f6454bf9000 r--s 00001000 08:04 1967681                    /home/paul/.m2/repository/overtone/at-at/1.2.0/at-at-1.2.0.jar
+7f6454bf9000-7f6454bfd000 r--s 00b6f000 08:04 1967706                    /home/paul/.m2/repository/overtone/scsynth-extras/3.5.7.0/scsynth-extras-3.5.7.0.jar
+7f6454bfd000-7f6454bff000 r--s 00000000 08:04 1836977                    /home/paul/.m2/repository/org/tcrawley/dynapath/0.2.3/dynapath-0.2.3.jar
+7f6454bff000-7f6454c03000 r--s 00037000 08:04 37622084                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+7f6454c03000-7f6454c04000 r--s 00010000 08:04 37622083                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/zipfs.jar
+7f6454c04000-7f6454c06000 r--s 00008000 08:04 37622077                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunec.jar
+7f6454c06000-7f6454c0b000 r--s 0003b000 08:04 37622552                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+7f6454c0b000-7f6454c0e000 r--s 0000f000 08:04 37622081                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+7f6454c0e000-7f6454c0f000 r--s 0000a000 08:04 37622553                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jaccess.jar
+7f6454c0f000-7f6454c11000 r--s 00001000 08:04 37622080                   /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/dnsns.jar
+7f6454c11000-7f6454c19000 rw-s 00000000 08:04 15729263                   /tmp/hsperfdata_paul/16301
+7f6454c19000-7f6454c1a000 rw-p 00000000 00:00 0 
+7f6454c1a000-7f6454c1b000 r--p 00000000 00:00 0 
+7f6454c1b000-7f6454c1d000 rw-p 00000000 00:00 0 
+7f6454c1d000-7f6454c1e000 r--p 00025000 08:04 51249179                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f6454c1e000-7f6454c1f000 rw-p 00026000 08:04 51249179                   /lib/x86_64-linux-gnu/ld-2.23.so
+7f6454c1f000-7f6454c20000 rw-p 00000000 00:00 0 
+7ffc85857000-7ffc85879000 rw-p 00000000 00:00 0                          [stack]
+7ffc859db000-7ffc859dd000 r--p 00000000 00:00 0                          [vvar]
+7ffc859dd000-7ffc859df000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:-OmitStackTraceInFastThrow -Dclojure.compile.path=/home/paul/Documents/code/overtone/insane-noises/target/classes -Dinsane-noises.version=0.1.0-SNAPSHOT -Dclojure.debug=false -Djava.library.path=/home/paul/Documents/code/overtone/insane-noises/target/native/linux/x86_64 
+java_command: clojure.main -i /tmp/form-init7617295901278981226.clj
+java_class_path (initial): /home/paul/Documents/code/overtone/insane-noises/test:/home/paul/Documents/code/overtone/insane-noises/src:/home/paul/Documents/code/overtone/insane-noises/dev-resources:/home/paul/Documents/code/overtone/insane-noises/resources:/home/paul/Documents/code/overtone/insane-noises/target/classes:/home/paul/.m2/repository/org/clojure/clojure/1.8.0/clojure-1.8.0.jar:/home/paul/.m2/repository/org/tcrawley/dynapath/0.2.3/dynapath-0.2.3.jar:/home/paul/.m2/repository/overtone/scsynth-extras/3.5.7.0/scsynth-extras-3.5.7.0.jar:/home/paul/.m2/repository/net/java/dev/jna/jna/3.4.0/jna-3.4.0.jar:/home/paul/.m2/repository/overtone/at-at/1.2.0/at-at-1.2.0.jar:/home/paul/.m2/repository/org/clojure/tools.nrepl/0.2.12/tools.nrepl-0.2.12.jar:/home/paul/.m2/repository/clojure-complete/clojure-complete/0.2.4/clojure-complete-0.2.4.jar:/home/paul/.m2/repository/overtone/byte-spec/0.3.1/byte-spec-0.3.1.jar:/home/paul/.m2/repository/overtone/overtone/0.10.1/overtone-0.10.1.jar:/home/paul/.m2/repository/overtone/osc-clj/0.9.0/osc-clj-0.9.0.jar:/home/paul/.m2/repository/org/clojure/java.classpath/0.2.0/java.classpath-0.2.0.jar:/home/paul/.m2/repository/overtone/libs.handlers/0.2.0/libs.handlers-0.2.0.jar:/home/paul/.m2/repository/overtone/scsynth/3.5.7.0/scsynth-3.5.7.0.jar:/home/paul/.m2/repository/commons-net/commons-net/3.0.1/commons-net-3.0.1.jar:/home/paul/.m2/repository/javax/jmdns/jmdns/3.4.1/jmdns-3.4.1.jar:/home/paul/.m2/repository/cljs-tooling/cljs-tooling/0.1.3/cljs-tooling-0.1.3.jar:/home/paul/.m2/repository/org/clojure/tools.trace/0.7.8/tools.trace-0.7.8.jar:/home/paul/.m2/repository/org/clojure/tools.namespace/0.2.5/tools.namespace-0.2.5.jar:/home/paul/.m2/repository/compliment/compliment/0.2.0/compliment-0.2.0.jar:/home/paul/.m2/repository/clj-glob/clj-glob/1.0.0/clj-glob-1.0.0.jar:/home/paul/.m2/repository/overtone/midi-clj/0.5.0/midi-clj-0.5.0.jar:/home/paul/.m2/repository/org/clojure/data.json/0.2.3/data.json-0.2.3.jar:/home/paul/.m2/repository/cl
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+CLASSPATH=/home/paul/.lein/self-installs/leiningen-2.7.1-standalone.jar
+PATH=~/.npm-global/bin:/home/paul/bin:/home/paul/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xa66fd0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xa66fd0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x8b0180], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x8b0180], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x8b0180], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x8b0180], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x8b0030], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x8b0500], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x8b0500], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x8b0500], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x8b0500], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=16.04
+DISTRIB_CODENAME=xenial
+DISTRIB_DESCRIPTION="Ubuntu 16.04.2 LTS"
+
+uname:Linux 4.4.0-64-generic #85-Ubuntu SMP Mon Feb 20 11:50:30 UTC 2017 x86_64
+libc:glibc 2.23 NPTL 2.23 
+rlimit: STACK 8192k, CORE 0k, NPROC 35768, NOFILE 65536, AS infinity
+load average:0.75 0.55 1.28
+
+/proc/meminfo:
+MemTotal:        9203516 kB
+MemFree:          180472 kB
+MemAvailable:     486240 kB
+Buffers:           40208 kB
+Cached:           605020 kB
+SwapCached:         2552 kB
+Active:          6986516 kB
+Inactive:        1469388 kB
+Active(anon):    6735448 kB
+Inactive(anon):  1253484 kB
+Active(file):     251068 kB
+Inactive(file):   215904 kB
+Unevictable:          48 kB
+Mlocked:              48 kB
+SwapTotal:       9437180 kB
+SwapFree:        9251484 kB
+Dirty:               292 kB
+Writeback:             0 kB
+AnonPages:       7808356 kB
+Mapped:           462620 kB
+Shmem:            178240 kB
+Slab:             205896 kB
+SReclaimable:     126624 kB
+SUnreclaim:        79272 kB
+KernelStack:       29200 kB
+PageTables:       130784 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    14038936 kB
+Committed_AS:   25742016 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   1030144 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      483200 kB
+DirectMap2M:     8951808 kB
+
+
+CPU:total 8 (4 cores per cpu, 2 threads per core) family 6 model 26 stepping 4, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht, tsc, tscinvbit, tscinv
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 26
+model name	: Intel(R) Core(TM) i7 CPU         920  @ 2.67GHz
+stepping	: 4
+microcode	: 0x12
+cpu MHz		: 1596.000
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 0
+cpu cores	: 4
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 11
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt lahf_lm tpr_shadow vnmi flexpriority ept vpid dtherm ida
+bugs		:
+bogomips	: 5397.46
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 26
+model name	: Intel(R) Core(TM) i7 CPU         920  @ 2.67GHz
+stepping	: 4
+microcode	: 0x12
+cpu MHz		: 2661.000
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 1
+cpu cores	: 4
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 11
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt lahf_lm tpr_shadow vnmi flexpriority ept vpid dtherm ida
+bugs		:
+bogomips	: 5397.46
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 26
+model name	: Intel(R) Core(TM) i7 CPU         920  @ 2.67GHz
+stepping	: 4
+microcode	: 0x12
+cpu MHz		: 1596.000
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 2
+cpu cores	: 4
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 11
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt lahf_lm tpr_shadow vnmi flexpriority ept vpid dtherm ida
+bugs		:
+bogomips	: 5397.46
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 26
+model name	: Intel(R) Core(TM) i7 CPU         920  @ 2.67GHz
+stepping	: 4
+microcode	: 0x12
+cpu MHz		: 1729.000
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 3
+cpu cores	: 4
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 11
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt lahf_lm tpr_shadow vnmi flexpriority ept vpid dtherm ida
+bugs		:
+bogomips	: 5397.46
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 26
+model name	: Intel(R) Core(TM) i7 CPU         920  @ 2.67GHz
+stepping	: 4
+microcode	: 0x12
+cpu MHz		: 1596.000
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 0
+cpu cores	: 4
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 11
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt lahf_lm tpr_shadow vnmi flexpriority ept vpid dtherm ida
+bugs		:
+bogomips	: 5397.46
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 26
+model name	: Intel(R) Core(TM) i7 CPU         920  @ 2.67GHz
+stepping	: 4
+microcode	: 0x12
+cpu MHz		: 1596.000
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 1
+cpu cores	: 4
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 11
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt lahf_lm tpr_shadow vnmi flexpriority ept vpid dtherm ida
+bugs		:
+bogomips	: 5397.46
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 6
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 26
+model name	: Intel(R) Core(TM) i7 CPU         920  @ 2.67GHz
+stepping	: 4
+microcode	: 0x12
+cpu MHz		: 2661.000
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 2
+cpu cores	: 4
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 11
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt lahf_lm tpr_shadow vnmi flexpriority ept vpid dtherm ida
+bugs		:
+bogomips	: 5397.46
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 7
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 26
+model name	: Intel(R) Core(TM) i7 CPU         920  @ 2.67GHz
+stepping	: 4
+microcode	: 0x12
+cpu MHz		: 1596.000
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 3
+cpu cores	: 4
+apicid		: 7
+initial apicid	: 7
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 11
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt lahf_lm tpr_shadow vnmi flexpriority ept vpid dtherm ida
+bugs		:
+bogomips	: 5397.46
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 9203516k(180472k free), swap 9437180k(9251484k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.121-b13) for linux-amd64 JRE (1.8.0_121-8u121-b13-0ubuntu1.16.04.2-b13), built on Jan 23 2017 15:51:29 by "buildd" with gcc 5.4.0 20160609
+
+time: Wed Mar  1 19:02:48 2017
+elapsed time: 30 seconds (0d 0h 0m 30s)
+
