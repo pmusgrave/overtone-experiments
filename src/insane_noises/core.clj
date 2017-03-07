@@ -17,13 +17,16 @@
 ;; This will loop through a number of harmonically related triangle waves from low to high
 ;; and then cycle back from high to low.
 ;; freq argument is starting frequency
-(defn triangle-loop [freq rate]
-  (let [sequence (range 20 20000)]  
-    (at (+ (now) 500) (tri-wave freq 0.01 0.1 0.4 0.4))
-    (at (+ (now) 1000) (tri-wave (* freq 2) 0.01 0.1 0.4 0.4))
-    (at (+ (now) 1500) (tri-wave (* freq 3) 0.01 0.1 0.4 0.4))
-    (at (+ (now) 2000) (tri-wave (* freq 4) 0.01 0.1 0.4 0.4))
-    (at (+ (now) 2500) (tri-wave (* freq 3) 0.01 0.1 0.4 0.4))
-    (at (+ (now) 3000) (tri-wave (* freq 2) 0.01 0.1 0.4 0.4))
-    (at (+ (now) 3500) (tri-wave (* freq 1) 0.01 0.1 0.4 0.4))
-    (at (+ (now) 4000) (tri-wave (* freq 0.5) 0.01 0.1 0.4 0.4))))
+(defn triangle-loop [freq delay]
+  (at (+ (now) (* delay 1)) (tri-wave freq 0.01 0.1 0.4 0.4))
+  (at (+ (now) (* delay 2)) (tri-wave (* freq 2) 0.01 0.1 0.4 0.4))
+  (at (+ (now) (* delay 3)) (tri-wave (* freq 3) 0.01 0.1 0.4 0.4))
+  (at (+ (now) (* delay 4)) (tri-wave (* freq 4) 0.01 0.1 0.4 0.4))
+  (at (+ (now) (* delay 5)) (tri-wave (* freq 3) 0.01 0.1 0.4 0.4))
+  (at (+ (now) (* delay 6)) (tri-wave (* freq 2) 0.01 0.1 0.4 0.4))
+  (at (+ (now) (* delay 7)) (tri-wave (* freq 1) 0.01 0.1 0.4 0.4))
+  (at (+ (now) (* delay 8)) (tri-wave (* freq 0.5) 0.01 0.1 0.4 0.4))
+  (apply-at (+ (now) (* delay 8)) #'triangle-loop [freq delay]))
+
+(triangle-loop 440 100)
+
