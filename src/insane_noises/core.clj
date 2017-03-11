@@ -28,5 +28,16 @@
   (at (+ (now) (* delay 8)) (tri-wave (* freq 0.5) 0.01 0.1 0.4 0.4))
   (apply-at (+ (now) (* delay 8)) #'triangle-loop [freq delay]))
 
-(triangle-loop 440 100)
+;; (triangle-loop 440 100)
+
+(defn triangle-rand [freq delay]
+  (at (+ (now) (* delay (rand-int 7))) (tri-wave freq 0.01 0.1 0.4 0.4))
+  (at (+ (now) (* delay (rand-int 7))) (tri-wave (* freq 2) 0.01 0.1 0.4 0.4))
+  (at (+ (now) (* delay (rand-int 7))) (tri-wave (* freq 3) 0.01 0.1 0.4 0.4))
+  (at (+ (now) (* delay (rand-int 7))) (tri-wave (* freq 4) 0.01 0.1 0.4 0.4))
+  (at (+ (now) (* delay (rand-int 7))) (tri-wave (* freq 3) 0.01 0.1 0.4 0.4))
+  (at (+ (now) (* delay (rand-int 7))) (tri-wave (* freq 2) 0.01 0.1 0.4 0.4))
+  (at (+ (now) (* delay (rand-int 7))) (tri-wave (* freq 1) 0.01 0.1 0.4 0.4))
+  (at (+ (now) (* delay (rand-int 7))) (tri-wave (* freq 0.5) 0.01 0.1 0.4 0.4))
+  (apply-at (+ (now) (* delay 8)) #'triangle-rand [freq delay]))
 
