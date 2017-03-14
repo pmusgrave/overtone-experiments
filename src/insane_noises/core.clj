@@ -2,7 +2,7 @@
 (use 'overtone.live)
 
 (definst tri-wave-adsr
-  [freq 440 attack 0.01 sustain 0.1 release 0.4 vol 0.4]
+  [freq 110 attack 0.01 sustain 0.1 release 0.4 vol 0.4]
   (* (env-gen (lin attack sustain release) 1 1 0 1 FREE)
      (lf-tri freq)
      vol))
@@ -33,6 +33,7 @@
 
 ;; (triangle-loop 440 100)
 
+;; same as triangle-loop, except the different triangle waves trigger at random times
 (defn triangle-rand [freq delay]
   (at (now) (tri-wave-adsr freq 0.01 0.1 0.4 0.4))
   (at (+ (now) (* delay (rand-int 7))) (tri-wave-adsr freq 0.01 0.1 0.4 0.4))
@@ -45,3 +46,8 @@
   (at (+ (now) (* delay (rand-int 7))) (tri-wave-adsr (* freq 0.5) 0.01 0.1 0.4 0.4))
   (apply-at (+ (now) (* delay 8)) #'triangle-rand [freq delay]))
 
+(defn loopfn [function delay]
+  (function)
+  (apply-at (+ (now) delay) #'loopfn [function delay]))
+
+(loopfn #(tri-wave-adsr) 300)
